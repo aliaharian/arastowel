@@ -12,7 +12,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
-<body class="animsition" >
+<body class="animsition">
 
 @include('includes.header')
 	<!-- Slide1 -->
@@ -203,8 +203,8 @@
 				<div class="modal-dialog" role="document" data-dismiss="modal">
 					<div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
 
-					<video controls>
-						<source src="https://statics.arastowel.com/images/film.mp4" type="video/mp4">
+					<video controls autoplay>
+						<source src="https://statics.arastowel.com/images/aras.mp4" type="video/mp4">
 					</video>
 				</div>
 			</div>

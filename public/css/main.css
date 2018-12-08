@@ -2316,7 +2316,7 @@ p{
 }
 
 #modal-video-01 .modal-dialog {
-    max-width: 100%;
+    max-width: 60%;
     height: 100%;
     padding: 0;
     margin: 0;
@@ -2329,6 +2329,7 @@ p{
     justify-content: center;
     align-items: center;
     position: relative;
+    left: 21%;
 }
 
 .wrap-video-mo-01 {
