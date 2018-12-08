@@ -583,6 +583,7 @@ class ComposerStaticInit8344043215591581243fc86787127a9e
         'App\\Http\\Controllers\\SizeController' => __DIR__ . '/../..' . '/app/Http/Controllers/SizeController.php',
         'App\\Http\\Controllers\\TagController' => __DIR__ . '/../..' . '/app/Http/Controllers/TagController.php',
         'App\\Http\\Controllers\\TowelController' => __DIR__ . '/../..' . '/app/Http/Controllers/TowelController.php',
+        'App\\Http\\Controllers\\ZarrinController' => __DIR__ . '/../..' . '/app/Http/Controllers/ZarrinController.php',
         'App\\Http\\Controllers\\invoiceController' => __DIR__ . '/../..' . '/app/Http/Controllers/invoiceController.php',
         'App\\Http\\Controllers\\mainController' => __DIR__ . '/../..' . '/app/Http/Controllers/mainController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',

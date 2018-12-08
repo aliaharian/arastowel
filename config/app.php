@@ -152,6 +152,7 @@ return [
         Anetwork\Validation\PersianValidationServiceProvider::class,
         CyrildeWit\EloquentViewable\EloquentViewableServiceProvider::class,
         PragmaRX\Tracker\Vendor\Laravel\ServiceProvider::class,
+        'Healey\Robots\RobotsServiceProvider',
 
 
         /*

@@ -33,6 +33,7 @@ return array(
     'App\\Http\\Controllers\\SizeController' => $baseDir . '/app/Http/Controllers/SizeController.php',
     'App\\Http\\Controllers\\TagController' => $baseDir . '/app/Http/Controllers/TagController.php',
     'App\\Http\\Controllers\\TowelController' => $baseDir . '/app/Http/Controllers/TowelController.php',
+    'App\\Http\\Controllers\\ZarrinController' => $baseDir . '/app/Http/Controllers/ZarrinController.php',
     'App\\Http\\Controllers\\invoiceController' => $baseDir . '/app/Http/Controllers/invoiceController.php',
     'App\\Http\\Controllers\\mainController' => $baseDir . '/app/Http/Controllers/mainController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',

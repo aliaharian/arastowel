@@ -11,6 +11,7 @@
 |
 */
 use \Illuminate\Support\Facades\Redirect;
+use Healey\Robots\Robots;
 
 Route::get('/','mainController@index')->name('index');
 Route::get('product','mainController@shop')->name('shop');

@@ -1,2 +1,12 @@
 User-agent: *
-Disallow:
+Disallow: /addToCart
+Disallow: /loadPrice
+Disallow: /deleteFromCart
+Disallow: /addToWishlist
+Disallow: /selectCity
+Disallow: /newsletter
+Disallow: /roza-admin/
+Disallow: /profile
+
+
+Sitemap: https://arastowel.com/sitemap
