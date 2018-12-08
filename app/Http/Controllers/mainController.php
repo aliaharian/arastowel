@@ -288,8 +288,35 @@ class mainController extends Controller
                 Pre_order::find($order->id)->delete();
             }
 
+            if ($total_price < 5000000) {
 
-            return redirect('/profile/order/' . $invoice_number);
+                $zarinpay = $off_total_price + 8000;
+
+            } else {
+                $zarinpay = $off_total_price;
+            }
+
+            if ($request->bank_id=='zarinpal'){
+                $results = Zarinpal::request(
+                    route('index'),          //required
+                    $zarinpay,                                  //required
+                    'پرداخت فاکتور '.$invoice_number,                             //required
+                    'info@arastowel.com'                      //optional
+                                           //optional
+
+                );
+// save $results['Authority'] for verifying step
+                Zarinpal::redirect(); // redirect user to zarinpal
+
+// after that verify transaction by that $results['Authority']
+                Zarinpal::verify('OK',1000,$results['Authority']);
+
+            }
+            else {
+
+
+                return redirect('/profile/order/' . $invoice_number);
+            }
         }
         else{
             foreach ($pre_order as $order) {
