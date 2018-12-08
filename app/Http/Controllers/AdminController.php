@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\brand_page;
+use App\Off;
 use App\Product;
 use App\tracker_log;
 use App\tracker_session;
@@ -102,6 +103,34 @@ class AdminController extends Controller
         }
         return back();
 
+    }
+
+    public function special()
+    {
+        $products=Product::all();
+        $hasSpecial=Off::where('special',1)->count();
+        return view('admin.special',compact('products','hasSpecial'));
+    }
+
+    public function specialStore(Request $request)
+    {
+        $off_id=Off::where('product_id',$request->product)->value('id');
+        $off=Off::find($off_id);
+        $off->special=1;
+        $off->image=$request->mainImage;
+        $off->text=$request->text;
+        $off->save();
+        return back();
+    }
+
+    public function specialDestroy($special)
+    {
+        $off_id=Off::where('product_id',$special)->value('id');
+
+        $off=Off::find($off_id);
+        $off->special=0;
+        $off->save();
+        return back();
     }
 
 //    public function createGiftCard()

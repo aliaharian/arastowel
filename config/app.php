@@ -152,8 +152,7 @@ return [
         Anetwork\Validation\PersianValidationServiceProvider::class,
         CyrildeWit\EloquentViewable\EloquentViewableServiceProvider::class,
         PragmaRX\Tracker\Vendor\Laravel\ServiceProvider::class,
-        'Healey\Robots\RobotsServiceProvider',
-
+        'Intervention\Image\ImageServiceProvider',
 
         /*
          * Package Service Providers...
@@ -221,6 +220,7 @@ return [
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Agent' => Jenssegers\Agent\Facades\Agent::class,
         'Tracker' => 'PragmaRX\Tracker\Vendor\Laravel\Facade',
+        'Intervention\Image\ImageServiceProvider',
 
     ],
 

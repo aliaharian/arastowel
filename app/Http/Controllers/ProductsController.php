@@ -351,7 +351,6 @@ class ProductsController extends Controller
     public function destroy($id)
     {
         Product::find($id)->delete();
-//        $articles=DB::table('articles')->get();
         return back();
     }
     public function search(Request $request)

@@ -81,7 +81,7 @@
 				<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 					<!-- block1 -->
 					<div class="block1 hov-img-zoom pos-relative m-b-30">
-						<img data-src="https://statics.arastowel.com/images/29.jpg" alt="حوله های ابعادی">
+						<img data-src="<?=Croppa::url('/images/29.jpg', 200, 200); ?>" alt="حوله های ابعادی">
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
@@ -211,24 +211,74 @@
 
 
 			<div class="col-sm-10 col-md-8 col-lg-6 m-l-r-auto p-t-15 p-b-15">
+				@foreach($products as $product)
+					@foreach($product->off as $off)
+					@if($off->special==1)
 				<div class="bgwhite hov-img-zoom pos-relative p-b-20per-ssm">
-					<img data-src="https://statics.arastowel.com/images/giftTowel.jpg" alt="هدیه ی ما به شما">
+					<img data-src="{{$off->image}}" alt="{{$off->text}}">
 
 					<div class="ab-t-l sizefull flex-col-c-b p-l-15 p-r-15 p-b-20">
 						<div class="t-center" style="background-color: white;padding: 0 4px;">
-							<a title="حوله هدیه" href="#" style="position: relative;width: 103%!important;background: #ff9600;color: #fff;font-size: 27px;transform: translateX(-4px);" class="dis-block s-text3 p-b-5">به مناسبت شب یلدا</a>
+							<a title="{{$product->name}}" href="{{route('shop.product',['product_id' => $product->id , 'product_name'=>str_replace(' ','-',$product->name)])}}" style="position: relative;width: 103%!important;background: #ff9600;color: #fff;font-size: 27px;transform: translateX(-4px);" class="dis-block s-text3 p-b-5">{{$off->text}}</a>
+
+							@if($product->variable!=2)
+								@if($product->off->count()>0)
+									@php $oldprice=$product->price @endphp
+									@foreach($product->off as $off)
+										@if(strtotime($off->start)<time() && strtotime($off->end)>time())
+											@php $percent=100-$off->percent; $newprice=$oldprice*$percent/100;  @endphp
+											<span class="block2-newprice m-text8" style="font-size: 26px;display: inline-block;direction: rtl;">{{number_format($newprice)}} تومان</span>
+											<span class=" m-text7 p-r-5" style="font-size: 24px;display: inline-block;direction: rtl;">{{number_format($oldprice)}} تومان</span>
+
+											@php $hasoff=1 @endphp
+										@else
+											<span class="block2-newprice m-text8" style="font-size: 26px;display: inline-block;direction: rtl;">{{number_format($product->price)}} تومان</span>
+
+										@endif
+									@endforeach
+								@else
+									<span class="block2-newprice m-text8" style="font-size: 26px;display: inline-block;direction: rtl;">{{number_format($product->price)}} تومان</span>
+								@endif
+							@else
+
+								@php $price=0 @endphp
+
+								@foreach($sizes as $size)
+									@if($size->product_id==$product->id)
+										@php $price=$size->price @endphp
+									@endif
+
+								@endforeach
+
+								@if($product->off->count()>0)
+									@php $oldprice=$price @endphp
+									@foreach($product->off as $off)
+										@if(strtotime($off->start)<time() && strtotime($off->end)>time())
+											@php $percent=100-$off->percent; $newprice=$oldprice*$percent/100;  @endphp
+											<span class="block2-newprice m-text8" style="font-size: 26px;display: inline-block;direction: rtl;">{{number_format($newprice)}} تومان</span>
+											<span class=" m-text7 p-r-5" style="font-size: 24px;display: inline-block;direction: rtl;">{{number_format($oldprice)}} تومان</span>
+
+											@php $hasoff=1 @endphp
+										@else
+											<span class="block2-newprice m-text8" style="font-size: 26px;display: inline-block;direction: rtl;">{{number_format($price)}} تومان</span>
+										@endif
+									@endforeach
+								@else
+									<span class="block2-newprice m-text8" style="font-size: 26px;display: inline-block;direction: rtl;">{{number_format($price)}} تومان</span>
+								@endif
 
 
-							<span class="block2-newprice m-text8" style="font-size: 26px;display: inline-block;direction: rtl;">315,000 تومان</span>
 
-							<span class=" m-text7 p-r-5" style="font-size: 24px;display: inline-block;direction: rtl;">350,000 تومان</span>
+							@endif
+
+
 
 						</div>
 
 						<div class="flex-c-m p-t-44 p-t-30-xl" id="countDown">
 							<div class="flex-col-c-m size3 countdown m-l-5 m-r-5">
 									<span class="m-text10 p-b-1 days">
-										15
+
 									</span>
 
 								<span class="s-text5">
@@ -238,7 +288,7 @@
 
 							<div class="flex-col-c-m size3 countdown m-l-5 m-r-5">
 									<span class="m-text10 p-b-1 hours">
-										04
+
 									</span>
 
 								<span class="s-text5">
@@ -248,7 +298,7 @@
 
 							<div class="flex-col-c-m size3 countdown m-l-5 m-r-5">
 									<span class="m-text10 p-b-1 minutes">
-										32
+
 									</span>
 
 								<span class="s-text5">
@@ -258,7 +308,7 @@
 
 							<div class="flex-col-c-m size3 countdown m-l-5 m-r-5">
 									<span class="m-text10 p-b-1 seconds">
-										05
+
 									</span>
 
 								<span class="s-text5">
@@ -268,6 +318,11 @@
 						</div>
 					</div>
 				</div>
+							@endif
+							@endforeach
+							@endforeach
+
+
 			</div>
 		</div>
 	</div>
@@ -283,7 +338,7 @@
 @if($JSON!=null)
 @php
     $data = json_decode($JSON);
-        $data2=$data->graphql->hashtag->edge_hashtag_to_media->edges;
+        @$data2=$data->graphql->hashtag->edge_hashtag_to_media->edges;
 @endphp
 <section class="instagram p-t-40 p-b-50">
 	<div class="sec-title p-b-35 p-l-15 p-r-15">
@@ -571,6 +626,68 @@
         }
 
 
+</script>
+
+
+<!--===============================================================================================-->
+<script src="https://statics.arastowel.com/js/main.js"></script>
+
+
+
+
+
+<script type="text/javascript">
+
+	@foreach($products as $product)
+	@foreach($product->off as $off)
+	@if($off->special==1)
+		@php($end=$off->end)
+	@endif
+	@endforeach
+	@endforeach
+    $('#countDown').countdown('{{@$end}}', function(event) {
+        $(this).html(
+            event.strftime('<div class="flex-col-c-m size3 countdown m-l-5 m-r-5">\n' +
+                '\t\t\t\t\t\t\t\t\t<span class="m-text10 p-b-1 days">\n' +
+                '\t\t\t\t\t\t\t\t\t\t%D\n' +
+                '\t\t\t\t\t\t\t\t\t</span>\n' +
+                '\n' +
+                '\t\t\t\t\t\t\t\t<span class="s-text5">\n' +
+                '\t\t\t\t\t\t\t\t\t\tروز\n' +
+                '\t\t\t\t\t\t\t\t\t</span>\n' +
+                '\t\t\t\t\t\t\t</div>\n' +
+                '\n' +
+                '\t\t\t\t\t\t\t<div class="flex-col-c-m size3 countdown m-l-5 m-r-5">\n' +
+                '\t\t\t\t\t\t\t\t\t<span class="m-text10 p-b-1 hours">\n' +
+                '\t\t\t\t\t\t\t\t\t\t%H\n' +
+                '\t\t\t\t\t\t\t\t\t</span>\n' +
+                '\n' +
+                '\t\t\t\t\t\t\t\t<span class="s-text5">\n' +
+                '\t\t\t\t\t\t\t\t\t\tساعت\n' +
+                '\t\t\t\t\t\t\t\t\t</span>\n' +
+                '\t\t\t\t\t\t\t</div>\n' +
+                '\n' +
+                '\t\t\t\t\t\t\t<div class="flex-col-c-m size3 countdown m-l-5 m-r-5">\n' +
+                '\t\t\t\t\t\t\t\t\t<span class="m-text10 p-b-1 minutes">\n' +
+                '\t\t\t\t\t\t\t\t\t\t%M\n' +
+                '\t\t\t\t\t\t\t\t\t</span>\n' +
+                '\n' +
+                '\t\t\t\t\t\t\t\t<span class="s-text5">\n' +
+                '\t\t\t\t\t\t\t\t\t\tدقیقه\n' +
+                '\t\t\t\t\t\t\t\t\t</span>\n' +
+                '\t\t\t\t\t\t\t</div>\n' +
+                '\n' +
+                '\t\t\t\t\t\t\t<div class="flex-col-c-m size3 countdown m-l-5 m-r-5">\n' +
+                '\t\t\t\t\t\t\t\t\t<span class="m-text10 p-b-1 seconds">\n' +
+                '\t\t\t\t\t\t\t\t\t\t%S\n' +
+                '\t\t\t\t\t\t\t\t\t</span>\n' +
+                '\n' +
+                '\t\t\t\t\t\t\t\t<span class="s-text5">\n' +
+                '\t\t\t\t\t\t\t\t\t\tثانیه\n' +
+                '\t\t\t\t\t\t\t\t\t</span>\n' +
+                '\t\t\t\t\t\t\t</div>'
+            ));
+    });
 </script>
 </body>
 </html>

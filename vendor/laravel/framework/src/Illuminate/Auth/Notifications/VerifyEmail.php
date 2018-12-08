@@ -41,13 +41,13 @@ class VerifyEmail extends Notification
         }
 
         return (new MailMessage)
-            ->subject(Lang::getFromJson('تایید ایمیل'))
-            ->line(Lang::getFromJson('لطفا برای تایید ایمیل خود روی دکمه زیر کلیک کنید'))
+            ->subject(Lang::getFromJson('Verify Email Address'))
+            ->line(Lang::getFromJson('Please click the button below to verify your email address.'))
             ->action(
-                Lang::getFromJson('تایید ایمیل'),
+                Lang::getFromJson('Verify Email Address'),
                 $this->verificationUrl($notifiable)
             )
-            ->line(Lang::getFromJson('در صورتی که شما در حوله ارس ثبت نام نکرده اید، این ایمیل را نادیده بگیرید'));
+            ->line(Lang::getFromJson('If you did not create an account, no further action is required.'));
     }
 
     /**

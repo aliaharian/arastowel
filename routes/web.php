@@ -89,8 +89,7 @@ Route::group(['prefix'=>'roza-admin','middleware'=>'adminAuth'], function(){
     Route::resource('invoices','invoiceController', [
         'except' => [ 'create','store','edit' ]
     ]);
-//    Route::get('product/search', 'ProductsController@search')->name('products.search');
-//    Route::get('product/promote/{id}', 'ProductsController@promote')->name('products.promote');
+
         Route::get('invoice/type/{type}', 'invoiceController@type')->name('invoices.type');
     /////////////////////////////////
 
@@ -132,6 +131,8 @@ Route::group(['prefix'=>'roza-admin','middleware'=>'adminAuth'], function(){
 
     /////////
     Route::get('product/special', 'AdminController@special')->name('special.index');
+    Route::post('product/special', 'AdminController@specialStore')->name('special.store');
+    Route::delete('product/special/{special}', 'AdminController@specialDestroy')->name('special.destroy');
 
 
 });
@@ -295,3 +296,5 @@ Route::get('zarrin','ZarrinController@pay');
 
 
 Route::get('sitemap','SitemapController@mainSite');
+
+
