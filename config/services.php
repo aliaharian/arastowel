@@ -40,4 +40,10 @@ return [
         'redirect'      => env('GOOGLE_REDIRECT')
     ],
 
+    'zarinpal' => [
+        'merchantID' => '152f2756-fac7-11e8-8ec3-005056a205be',
+        'zarinGate' => false,
+        'sandbox' => false,
+    ],
+
 ];

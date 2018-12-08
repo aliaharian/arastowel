@@ -285,6 +285,7 @@ Route::get('/dyeing---fnishing---en.html', function(){
     return Redirect::to('/about-us', 301);
 });
 
+Route::get('zarrin','ZarrinController@pay');
 
 
 Route::get('sitemap','SitemapController@mainSite');
