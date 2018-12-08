@@ -103,7 +103,6 @@
                                             </li>
                                         </ul>
                                 @endforeach
-                                <form method="post" id="shipping-data-form">
                                     <div class="js-eco-delivery " style="">
 
                                         <div class="c-checkout-pack">
@@ -148,7 +147,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </form>
+
                             </div>
 
 
