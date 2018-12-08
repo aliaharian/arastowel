@@ -18,7 +18,7 @@ class SitemapController extends Controller
         $sitemap = App::make("sitemap");
 
         /* add item to the sitemap (url, date, priority, freq) */
-        $sitemap->add('https://arastowel.com', date('c', time()), '1.0', 'daily');
+        $sitemap->add(URL::to('/'), date('c', time()), '1.0', 'daily');
         $sitemap->add(route('about-us'),date('c', time()),'0.8', 'monthly');
         $sitemap->add(route('blog'),date('c', time()),'0.8', 'daily');
 //        blog
