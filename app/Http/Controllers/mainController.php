@@ -299,7 +299,7 @@ class mainController extends Controller
 
             if ($request->bank_id=='zarinpal'){
                 $results = Zarinpal::request(
-                    route('pay-from-zarrin'),
+                    route('pay-from-zarrin',[$invoice_number]),
                     $zarinpay,
                     'پرداخت فاکتور '.$invoice_number,
                     Auth::user()->email
