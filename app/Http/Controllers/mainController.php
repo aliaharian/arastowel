@@ -291,7 +291,7 @@ class mainController extends Controller
 
             if ($total_price < 5000000) {
 
-                $zarinpay = $off_total_price;
+                $zarinpay = $off_total_price+8000;
 
             } else {
                 $zarinpay = $off_total_price;

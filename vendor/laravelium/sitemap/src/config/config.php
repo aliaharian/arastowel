@@ -9,6 +9,6 @@ return [
     'use_limit_size' => false,
     'max_size' => null,
     'use_styles' => true,
-    'styles_location' => '/vendor/sitemap/styles/',
+    'styles_location' => 'https://arastowel.com/vendor/sitemap/styles/',
     'use_gzip' => false
 ];
