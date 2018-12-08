@@ -18,7 +18,7 @@ class SitemapController extends Controller
         $sitemap = App::make("sitemap");
 
         /* add item to the sitemap (url, date, priority, freq) */
-        $sitemap->add(URL::to('/'), date('c', time()), '1.0', 'daily');
+        $sitemap->add('https://arastowel.com', date('c', time()), '1.0', 'daily');
         $sitemap->add(route('about-us'),date('c', time()),'0.8', 'monthly');
         $sitemap->add(route('blog'),date('c', time()),'0.8', 'daily');
 //        blog
@@ -28,7 +28,7 @@ class SitemapController extends Controller
             $images = [
                 ['url' => URL::to($blog->image), 'title' => $blog->title],
             ];
-            $sitemap->add(route('blog.post', [$blog->id, $blog->title]), $blog->updated_at, '0.80', 'daily',$images);
+            $sitemap->add('https:'.route('blog.post', [$blog->id, $blog->title]), $blog->updated_at, '0.80', 'daily',$images);
         }
 
         $tags=Tag::all();
@@ -124,93 +124,7 @@ class SitemapController extends Controller
         /*******************************************************/
         $sitemap->add(route('shopping-steps'),date('c', time()),'0.8', 'monthly');
 
-//
-//        /*******************************************************/
-//        $tabs = Menu::where('sub_domain_id', null)->get();
-//        $tabResult = array();
-//        if (!empty($tabs)) {
-//            foreach ($tabs as $key => $value) {
-//                $tabResult[$value->id]['id'] = $value->id;
-//                $tabResult[$value->id]['slug'] = $value->slug;
-//                $tabResult[$value->id]['title'] = $value->title;
-//                $tabResult[$value->id]['updated_at'] = $value->updated_at;
-//                $tabResult[$value->id]['image'][] = $value->image;
-//            }
-//        }
-//
-//        /* add every tab to the sitemap */
-//        foreach ($tabResult as $key => $value) {
-//            $images = array();
-//            foreach ($value['image'] as $key2 => $value2) {
-//                if (isset($value2)) {
-//                    $images[] = array(
-//                        'url' => route('getEntry', ['menu', $value2]),
-//                        'title' => $value['slug'],
-//                        'caption' => $value['title']
-//                    );
-//                }
-//            }
-//            $sitemap->add(route('menu.show', [$value['id'], $value['slug']]), $value['updated_at'], '1.0', 'daily', $images);
-//        }
-//        /*******************************************************/
-//        $tabs = IranianStudent::where('sub_domain_id', null)->get();
-//        $tabResult = array();
-//        if (!empty($tabs)) {
-//            foreach ($tabs as $key => $value) {
-//                $tabResult[$value->id]['id'] = $value->id;
-//                $tabResult[$value->id]['slug'] = $value->slug;
-//                $tabResult[$value->id]['title'] = $value->title;
-//                $tabResult[$value->id]['updated_at'] = $value->updated_at;
-//                $tabResult[$value->id]['image'][] = $value->image;
-//            }
-//        }
-//
-//        /* add every tab to the sitemap */
-//        foreach ($tabResult as $key => $value) {
-//            $images = array();
-//            foreach ($value['image'] as $key2 => $value2) {
-//                if (isset($value2)) {
-//                    if (isset($value2)) {
-//                        $images[] = array(
-//                            'url' => route('getEntry', ['is', $value2]),
-//                            'title' => $value['slug'],
-//                            'caption' => $value['title']
-//                        );
-//                    }
-//                }
-//            }
-//            $sitemap->add(route('is.show', [$value['id'], $value['slug']]), $value['updated_at'], '1.0', 'daily', $images);
-//        }
-//
-//        /*******************************************************/
-//        $tabs = NewVolunteer::where('sub_domain_id', null)->get();
-//        $tabResult = array();
-//        if (!empty($tabs)) {
-//            foreach ($tabs as $key => $value) {
-//                $tabResult[$value->id]['id'] = $value->id;
-//                $tabResult[$value->id]['slug'] = $value->slug;
-//                $tabResult[$value->id]['title'] = $value->title;
-//                $tabResult[$value->id]['updated_at'] = $value->updated_at;
-//                $tabResult[$value->id]['image'][] = $value->image;
-//            }
-//        }
-//
-//        /* add every tab to the sitemap */
-//        foreach ($tabResult as $key => $value) {
-//            $images = array();
-//            foreach ($value['image'] as $key2 => $value2) {
-//                if (isset($value2)) {
-//                    $images[] = array(
-//                        'url' => route('getEntry', ['nv', $value2]),
-//                        'title' => $value['slug'],
-//                        'caption' => $value['title']
-//                    );
-//                }
-//            }
-//            $sitemap->add(route('nv.show', [$value['id'], $value['slug']]), $value['updated_at'], '1.0', 'daily', $images);
-//        }
 
-        /* show your sitemap (options: 'xml' (default), 'html', 'txt', 'ror-rss', 'ror-rdf') */
         return $sitemap->render('xml');
     }
 }
