@@ -6,7 +6,7 @@
         Copyright 2019 © All Rights Reserved for Arastowel.com
         <div>
             <a rel="nofollow" title="موسسه نصیرزاده" href="https://nasirzadeh.com"   target="_blank" class="fs-18 color1 p-l-20 nsfooter" style="display: inline-block;background-image: url(https://statics.arastowel.com/images/100.png);width: 30px;height: 30px;background-position: center;background-size: contain;background-repeat: no-repeat;"></a>
-            <a rel="nofollow" title="موسسه نصیرزاده" href="https://nasirzadeh.com" target="_blank" style="font-size: 8px;display: inline-block;transform: translateY(-10px);">Graphic Design/H.Nasirzadeh <span style="font-size: 14px;">&#8226;</span>  Developed By A. Aharian</a>
+            <a rel="nofollow" title="موسسه نصیرزاده" href="https://nasirzadeh.com" target="_blank" style="font-size: 8px!important;display: inline-block;transform: translateY(-10px);">Graphic Design/H.Nasirzadeh <span style="font-size: 14px;">&#8226;</span>  Developed By A. Aharian</a>
         </div>
     </div>
 
@@ -15,7 +15,7 @@
         Copyright 2019 © All Rights Reserved for ARASTOWEL.COM
         <div class="pull-left" style="position: relative">
             <a rel="nofollow" title="موسسه نصیرزاده" href="https://nasirzadeh.com"   target="_blank" class="fs-18 color1 p-l-20 nsfooter" style="bottom: -33px;left: 66px;position: absolute;display: block;background-image: url(https://statics.arastowel.com/images/100.png);width: 30px;height: 30px;background-position: center;background-size: contain;background-repeat: no-repeat;padding-left: 45px;padding-bottom: 15px;"></a>
-            <a rel="nofollow" title="موسسه نصیرزاده" href="https://nasirzadeh.com" target="_blank" style="float: right;position: absolute;left: 100px;width:232px;text-align:left;font-size: 8px;line-height:30px;padding-top: 3px;">Graphic Design/H.Nasirzadeh <span style="font-size: 14px;line-height: 30px">&#8226;</span>  Developed By A. Aharian</a>
+            <a rel="nofollow" title="موسسه نصیرزاده" href="https://nasirzadeh.com" target="_blank" style="float: right;position: absolute;left: 100px;width:232px;text-align:left;font-size: 8px!important;line-height:30px!important;padding-top: 3px;">Graphic Design/H.Nasirzadeh <span style="font-size: 14px;line-height: 30px!important;">&#8226;</span>  Developed By A. Aharian</a>
         </div>
     </div>
 
