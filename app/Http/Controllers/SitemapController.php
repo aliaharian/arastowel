@@ -28,7 +28,7 @@ class SitemapController extends Controller
             $images = [
                 ['url' => URL::to($blog->image), 'title' => $blog->title],
             ];
-            $sitemap->add('https:'.route('blog.post', [$blog->id, $blog->title]), $blog->updated_at, '0.80', 'daily',$images);
+            $sitemap->add('https:'.route('blog.post', [$blog->id, str_replace(' ','-',$blog->title)]), $blog->updated_at, '0.80', 'daily',$images);
         }
 
         $tags=Tag::all();
@@ -75,7 +75,7 @@ class SitemapController extends Controller
                 'title' => $product->name
             );
 
-            $sitemap->add(route('shop.product', [$product->id, $product->name]), $product->updated_at, '0.85', 'daily',$images);
+            $sitemap->add(route('shop.product', [$product->id, str_replace(' ','-',$product->name)]), $product->updated_at, '0.85', 'daily',$images);
         }
 
         $categories=Category::all();
