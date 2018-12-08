@@ -392,5 +392,26 @@ class ProfileController extends Controller
 
     }
 
+    public function payFromZarrin(Request $request , $invoice_number)
+    {
+        $Authority=$request->Authority;
+        $Status=$request->Status;
+        $invoice_id=invoice::where('invoice_number',$invoice_number)->value('id');
+        $invoice=invoice::find($invoice_id);
+        $invoice->transaction_number=$Authority;
+
+        if ($Status=='OK'){
+            $invoice->payed=1;
+        }
+        else if ($Status=='NOK'){
+            $invoice->payed=0;
+        }
+
+        $invoice->save();
+        return redirect('/profile/order/' . $invoice_number);
+
+
+    }
+
 
 }

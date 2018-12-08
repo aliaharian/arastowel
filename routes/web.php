@@ -66,6 +66,9 @@ Route::group(['prefix'=>'profile','middleware'=>['auth','verified']], function()
     Route::delete('addresses/delete', 'ProfileController@destroyAddress')->name('profile.address.destroy');
 
     Route::get('show-order', 'ProfileController@sendOrderTrack')->name('send-orderTrack');
+
+
+    Route::get('pay-redirect/{invoice_number}', 'ProfileController@payFromZarrin')->name('pay-from-zarrin');
 });
 
 
@@ -141,6 +144,8 @@ Route::get('newsletter','AjaxController@newsletter')->name('newsletter');
 
 
 Auth::routes(['verify' => true]);
+
+
 
 
 Route::get('/home', 'HomeController@index')->name('home');

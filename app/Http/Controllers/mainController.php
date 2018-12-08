@@ -291,7 +291,7 @@ class mainController extends Controller
 
             if ($total_price < 5000000) {
 
-                $zarinpay = $off_total_price ;
+                $zarinpay = $off_total_price;
 
             } else {
                 $zarinpay = $off_total_price;
@@ -299,11 +299,11 @@ class mainController extends Controller
 
             if ($request->bank_id=='zarinpal'){
                 $results = Zarinpal::request(
-                    route('index'),          //required
-                    $zarinpay,                                  //required
-                    'پرداخت فاکتور '.$invoice_number,                             //required
-                    'info@arastowel.com'                      //optional
-                                           //optional
+                    route('pay-from-zarrin'),
+                    $zarinpay,
+                    'پرداخت فاکتور '.$invoice_number,
+                    Auth::user()->email
+
 
                 );
 // save $results['Authority'] for verifying step
