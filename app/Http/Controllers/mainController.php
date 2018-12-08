@@ -21,6 +21,7 @@ use CyrildeWit\EloquentViewable\Support\Period;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Jenssegers\Agent\Agent;
+use Zarinpal\Laravel\Facade\Zarinpal;
 
 class mainController extends Controller
 {
