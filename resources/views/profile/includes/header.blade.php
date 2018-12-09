@@ -1,6 +1,6 @@
 <div class="c-profile-box">
                     <div class="c-profile-box__header">
-                        <div class="c-profile-box__avatar js-user-avatar" style="background-image: url({{\Illuminate\Support\Facades\Auth::user()->avatar}})"></div>
+                        <div class="c-profile-box__avatar js-user-avatar" style=""></div>
                         <button class="c-profile-box__btn-edit js-change-avatar fa fa-edit"></button>
                     </div>
                     <div class="c-profile-box__username">{{\Illuminate\Support\Facades\Auth::user()->name}} {{\Illuminate\Support\Facades\Auth::user()->last_name}}</div>

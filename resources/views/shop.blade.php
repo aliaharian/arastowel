@@ -83,7 +83,7 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img src="{{$product->image}}" alt="{{$product->name}}">
+								<img src="<?=Croppa::url($product->image, 270, 360); ?>" alt="{{$product->name}}">
 
 								<div class="block2-overlay trans-0-4">
 									@if(\Illuminate\Support\Facades\Auth::check())

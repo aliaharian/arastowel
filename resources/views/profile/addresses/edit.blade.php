@@ -30,7 +30,7 @@
         }
     </style>
 </head>
-<body class="animsition">
+<body>
 
 @include('includes.header')
 

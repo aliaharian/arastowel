@@ -81,7 +81,7 @@
 				<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 					<!-- block1 -->
 					<div class="block1 hov-img-zoom pos-relative m-b-30">
-						<img data-src="<?=Croppa::url('/images/29.jpg', 200, 200); ?>" alt="حوله های ابعادی">
+						<img data-src="https://statics.arastowel.com/images/29.jpg" alt="حوله های ابعادی">
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
@@ -353,7 +353,13 @@
 		@foreach ($data2 as $datas)
 			@if($i<5)
 				<div class="block4 wrap-pic-w">
-					<img data-src="{{$datas->node->thumbnail_src}}" src="https://statics.arastowel.com/pre.jpg" alt="	@php
+					@php  $j=0;  @endphp
+					@foreach($datas->node->thumbnail_resources as $thumbnail)
+						@if($j<3)
+						@php  $thumb=$thumbnail->src; $j=$j+1;  @endphp
+						@endif
+						@endforeach
+					<img data-src="{{$thumb}}"  alt="	@php
                         $captions=$datas->node->edge_media_to_caption->edges;
                     @endphp
                     @foreach($captions as $caption)
@@ -410,7 +416,7 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img data-src="{{$product->image}}" alt="{{$product->name}}">
+								<img data-src="<?=Croppa::url($product->image, 270, 360); ?>" alt="{{$product->name}}">
 
 								<div class="block2-overlay trans-0-4">
 									@if(\Illuminate\Support\Facades\Auth::check())

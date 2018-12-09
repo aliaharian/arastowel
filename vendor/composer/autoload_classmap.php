@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Ammont\\Finglify\\Finglify' => $vendorDir . '/ammont/finglify/src/Finglify.php',
     'Anetwork\\Validation\\PersianValidationServiceProvider' => $vendorDir . '/anetwork/validation/src/PersianValidationServiceProvider.php',
     'Anetwork\\Validation\\ValidationMessages' => $vendorDir . '/anetwork/validation/src/ValidationMessages.php',
     'Anetwork\\Validation\\ValidationRules' => $vendorDir . '/anetwork/validation/src/ValidationRules.php',

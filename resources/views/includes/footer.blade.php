@@ -5,10 +5,10 @@
 
             <div>
                 <div class="s-text7 w-size27" style="direction: rtl;font-size: 16px;" >
-                    <p style="color: #ccc"><img alt="" src="https://statics.arastowel.com/images/phone_footer.png" style="width:20px" /> ۰۲۱-۸۸۹۳۲۷۶۸ &nbsp;<br />
-                        <img alt="شماره موبایل" src="https://statics.arastowel.com/images/mobile_footer.png" style="margin-right:3px; width:20px" /> ۰۹۱۲-۷۲۵۷۹۶۲&zwnj;&nbsp;</p>
+                    <p style="color: #ccc"><img alt="" src="<?=Croppa::url('/files/phone_footer.png', 20, 19); ?>" style="width:20px" /> ۰۲۱-۸۸۹۳۲۷۶۸ &nbsp;<br />
+                        <img alt="شماره موبایل" src="<?=Croppa::url('/files/mobile_footer.png', 20, 36); ?>" style="margin-right:3px; width:20px" /> ۰۹۱۲-۷۲۵۷۹۶۲&zwnj;&nbsp;</p>
 
-                    <p style="color: #ccc"><img alt="آدرس ایمیل" src="https://statics.arastowel.com/images/mailfooter.png" style="margin-right:3px; width:20px" /><a title="ایمیل حوله ارس" href="mailto:info@arastowel.com" style="color: #ccc"> info[at]arastowel.com </a></p>
+                    <p style="color: #ccc"><img alt="آدرس ایمیل" src="<?=Croppa::url('/files/mailfooter.png', 20, 13); ?>" style="margin-right:3px; width:20px" /><a title="ایمیل حوله ارس" href="mailto:info@arastowel.com" style="color: #ccc"> info[at]arastowel.com </a></p>
 
 
                 </div>

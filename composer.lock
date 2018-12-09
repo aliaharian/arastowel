@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "abd3336e49ec38dc35ac4cc5d2de6849",
+    "content-hash": "6ec120bd7841ca647c7aa9215e49466c",
     "packages": [
         {
             "name": "anetwork/validation",
@@ -5113,6 +5113,42 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "ammont/finglify",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ammont/finglify.git",
+                "reference": "7f6c6429f1851540d2d88520b384d09cab95521a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ammont/finglify/zipball/7f6c6429f1851540d2d88520b384d09cab95521a",
+                "reference": "7f6c6429f1851540d2d88520b384d09cab95521a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ammont\\Finglify\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Amir Montazer",
+                    "email": "ammontazer@gmail.com"
+                }
+            ],
+            "description": "Translates farsi/persian to finglish/pinglish.",
+            "time": "2015-03-30T11:31:50+00:00"
+        },
         {
             "name": "beyondcode/laravel-dump-server",
             "version": "1.2.2",

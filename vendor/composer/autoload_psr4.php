@@ -90,5 +90,6 @@ return array(
     'Assert\\' => array($vendorDir . '/beberlei/assert/lib/Assert'),
     'App\\' => array($baseDir . '/app'),
     'Anetwork\\Validation\\' => array($vendorDir . '/anetwork/validation/src'),
+    'Ammont\\Finglify\\' => array($vendorDir . '/ammont/finglify/src'),
     '' => array($vendorDir . '/nesbot/carbon/src'),
 );

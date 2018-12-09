@@ -33,6 +33,12 @@
             $pre_order=\App\Pre_order::where('user_ip',$user_ip)->where('user_platform',$user_platform)->where('user_browser',$user_browser)->get();
 @endphp
 
+{{--preload--}}
+<div id="preloader">
+	<div id="status">&nbsp;</div>
+</div>
+{{--preload--}}
+
 <!-- header fixed -->
 <div class="wrap_header fixed-header2 trans-0-4">
 	<!-- Logo -->

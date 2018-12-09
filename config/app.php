@@ -154,6 +154,7 @@ return [
         PragmaRX\Tracker\Vendor\Laravel\ServiceProvider::class,
         'Intervention\Image\ImageServiceProvider',
 
+
         /*
          * Package Service Providers...
          */
@@ -221,6 +222,8 @@ return [
         'Agent' => Jenssegers\Agent\Facades\Agent::class,
         'Tracker' => 'PragmaRX\Tracker\Vendor\Laravel\Facade',
         'Intervention\Image\ImageServiceProvider',
+
+
 
     ],
 
