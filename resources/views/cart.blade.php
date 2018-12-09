@@ -6,7 +6,7 @@
 
 	@include('includes.headLinks')
 </head>
-<body class="animsition">
+<body class="animsition loading">
 
 @include('includes.header')
 	<!-- Title Page -->

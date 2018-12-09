@@ -188,7 +188,6 @@ class ComposerStaticInit8344043215591581243fc86787127a9e
             'Assert\\' => 7,
             'App\\' => 4,
             'Anetwork\\Validation\\' => 20,
-            'Ammont\\Finglify\\' => 16,
         ),
     );
 
@@ -532,10 +531,6 @@ class ComposerStaticInit8344043215591581243fc86787127a9e
         array (
             0 => __DIR__ . '/..' . '/anetwork/validation/src',
         ),
-        'Ammont\\Finglify\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/ammont/finglify/src',
-        ),
     );
 
     public static $fallbackDirsPsr4 = array (
@@ -600,7 +595,6 @@ class ComposerStaticInit8344043215591581243fc86787127a9e
     );
 
     public static $classMap = array (
-        'Ammont\\Finglify\\Finglify' => __DIR__ . '/..' . '/ammont/finglify/src/Finglify.php',
         'Anetwork\\Validation\\PersianValidationServiceProvider' => __DIR__ . '/..' . '/anetwork/validation/src/PersianValidationServiceProvider.php',
         'Anetwork\\Validation\\ValidationMessages' => __DIR__ . '/..' . '/anetwork/validation/src/ValidationMessages.php',
         'Anetwork\\Validation\\ValidationRules' => __DIR__ . '/..' . '/anetwork/validation/src/ValidationRules.php',

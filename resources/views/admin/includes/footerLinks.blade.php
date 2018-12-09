@@ -1,4 +1,3 @@
-
 <!-- jQuery 3 -->
 <script src="https://statics.arastowel.com/panel-admin/js/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->

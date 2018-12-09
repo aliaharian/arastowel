@@ -55,98 +55,11 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
 
-        .displaynone {
-            display: none;
-        }
-
-        .c-ui-variant {
-            display: inline-block;
-            position: relative;
-        }
-
-        .c-ui-variant--color .c-ui-variant__shape {
-            width: 20px;
-            height: 20px;
-            position: absolute;
-            right: 8px;
-            top: 8px;
-            border-radius: 5px;
-            background: #ccc;
-            border: 1px solid #ccc;
-            content: "";
-        }
-
-        .c-ui-variant input[type=radio] {
-            visibility: hidden;
-            position: absolute;
-        }
-
-        .c-ui-variant--color .c-ui-variant__check {
-            font-weight: normal;
-            font-family: roya;
-            color: black;
-            padding-right: 38px;
-            padding-bottom: 6px;
-            font-size: 14px;
-        }
-
-        .c-ui-variant__check {
-            cursor: pointer;
-            border: 1px solid #dedede;
-            border-radius: 5px;
-            color: #6f6f6f;
-            padding: 5px 16px;
-            font-size: 13px;
-            font-size: .929rem;
-            line-height: 1.692;
-            display: block;
-        }
-
-        .selected {
-            border: 1px solid purple;
-            border-radius: 5px;
-
-        }
-        /* Start by setting display:none to make this hidden.
-   Then we position it in relation to the viewport window
-   with position:fixed. Width, height, top and left speak
-   for themselves. Background we set to 80% white with
-   our animation centered, and no-repeating */
-        .modal {
-            display:    none;
-            position:   fixed;
-            z-index:    1000;
-            top:        0;
-            left:       0;
-            height:     100%;
-            width:      100%;
-            background: rgba( 255, 255, 255, .8 )
-            50% 50%
-            no-repeat;
-        }
-
-        /* When the body has the loading class, we turn
-           the scrollbar off with overflow:hidden */
-        body.loading .modal {
-            overflow: hidden;
-        }
-
-        /* Anytime the body has the loading class, our
-           modal element will be visible */
-        body.loading .modal {
-            display: block;
-        }
-    </style>
 </head>
-<body class="animsition">
+<body class="animsition loading">
 
-<div class="modal"><div class="animsition-loading-1" style="z-index: 99999999">
-        <div data-loader="ball-scale">
-        </div>
-    </div>
-</div>
+
 
 
 <input id="variable" value="{{$product->variable}}" hidden>

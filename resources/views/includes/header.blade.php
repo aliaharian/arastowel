@@ -34,8 +34,11 @@
 @endphp
 
 {{--preload--}}
-<div id="preloader">
-	<div id="status">&nbsp;</div>
+<div class="modal">
+	<div class="animsition-loading-1">
+		<div data-loader="ball-scale">
+		</div>
+	</div>
 </div>
 {{--preload--}}
 

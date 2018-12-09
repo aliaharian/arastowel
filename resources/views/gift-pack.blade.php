@@ -56,7 +56,7 @@
         }
     </style>
 </head>
-<body class="animsition">
+<body class="animsition loading">
 <div class="modal fade" id="myModal" role="dialog" style="z-index: 999999">
     <div class="modal-dialog">
 

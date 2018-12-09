@@ -74,7 +74,7 @@ Route::group(['prefix'=>'profile','middleware'=>['auth','verified']], function()
 
 
 
-Route::group(['prefix'=>'roza-admin','middleware'=>'adminAuth'], function(){
+Route::group(['prefix'=>'roza-admin','middleware'=>['adminAuth']], function(){
     Route::get('', 'AdminController@index')->name('admin.index');
     Route::get('/profile', 'AdminController@profile')->name('admin.profile');
     /////////////////////////////////

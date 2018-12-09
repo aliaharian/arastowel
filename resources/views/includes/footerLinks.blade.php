@@ -25,7 +25,6 @@
 <script type="text/javascript" src="https://statics.arastowel.com/vendor/lightbox2/js/lightbox.min.js"></script>
 <!--===============================================================================================-->
 <script type="text/javascript" src="https://statics.arastowel.com/vendor/sweetalert/sweetalert.min.js"></script>
-<script type="text/javascript" src="https://statics.arastowel.com/js/main.js"></script>
 <script type="text/javascript">
     $('.addtocart').each(function(){
         $(this).on('click', function(){
@@ -119,6 +118,9 @@
     });
 
 </script>
+
+<script src="/js/main.js"></script>
+
 
 
 

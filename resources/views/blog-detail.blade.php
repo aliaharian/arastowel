@@ -54,7 +54,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body class="animsition">
+<body class="animsition loading">
 @include('includes.header')
 @if($post->published!=1)
 <h1 class="text-center alert alert-danger">
