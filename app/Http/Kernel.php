@@ -20,12 +20,12 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         \App\Http\Middleware\TrustProxies::class,
         \RenatoMarinho\LaravelPageSpeed\Middleware\InlineCss::class,
-//        \RenatoMarinho\LaravelPageSpeed\Middleware\ElideAttributes::class,
+        \RenatoMarinho\LaravelPageSpeed\Middleware\ElideAttributes::class,
 //        \RenatoMarinho\LaravelPageSpeed\Middleware\InsertDNSPrefetch::class,
-//        \RenatoMarinho\LaravelPageSpeed\Middleware\RemoveComments::class,
+        \RenatoMarinho\LaravelPageSpeed\Middleware\RemoveComments::class,
 //        \RenatoMarinho\LaravelPageSpeed\Middleware\TrimUrls::class,
 //        \RenatoMarinho\LaravelPageSpeed\Middleware\RemoveQuotes::class,
-//        \RenatoMarinho\LaravelPageSpeed\Middleware\CollapseWhitespace::class,
+        \RenatoMarinho\LaravelPageSpeed\Middleware\CollapseWhitespace::class,
 
 
     ];
@@ -37,14 +37,13 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-            \App\Http\Middleware\EncryptCookies::class,
-            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+//            \App\Http\Middleware\EncryptCookies::class,
+//            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             // \Illuminate\Session\Middleware\AuthenticateSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \PragmaRX\Tracker\Vendor\Laravel\Middlewares\Tracker::class,
 
         ],
 

@@ -151,7 +151,6 @@ return [
         Jenssegers\Agent\AgentServiceProvider::class,
         Anetwork\Validation\PersianValidationServiceProvider::class,
         CyrildeWit\EloquentViewable\EloquentViewableServiceProvider::class,
-        PragmaRX\Tracker\Vendor\Laravel\ServiceProvider::class,
         'Intervention\Image\ImageServiceProvider',
 
 
@@ -220,7 +219,6 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Agent' => Jenssegers\Agent\Facades\Agent::class,
-        'Tracker' => 'PragmaRX\Tracker\Vendor\Laravel\Facade',
         'Intervention\Image\ImageServiceProvider',
 
 

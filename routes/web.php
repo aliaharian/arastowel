@@ -292,6 +292,34 @@ Route::get('/dyeing---fnishing---en.html', function(){
     return Redirect::to('/about-us', 301);
 });
 
+Route::get('/gift-towels.php', function(){
+    return Redirect::to('/gift-pack', 301);
+});
+
+
+Route::get('/bathrob-towel.php', function(){
+    return Redirect::to('/product', 301);
+});
+
+Route::get('/product/188/محصول-تست', function(){
+    return Redirect::to('/product', 301);
+});
+
+Route::get('php-file',function (){
+    return view('php-file');
+})->name('php-file');
+
+Route::get('more-info',function (){
+    if (isset($_GET['variable'])) {
+        return view('ajax.more-info');
+    }
+    else{
+        return abort('403');
+    }
+
+})->name('more-info');
+
+
 Route::get('zarrin','ZarrinController@pay');
 
 

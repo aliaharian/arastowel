@@ -12,10 +12,9 @@
 		@foreach($product->off as $off)
 			@if(strtotime($off->start)<time() && strtotime($off->end)>time())
 				@php $percent=100-$off->percent; $newprice=$oldprice*$percent/100;  @endphp
-				<span style="display: inherit">تومان</span>
+					<span class="newprice"> {{number_format(($newprice))}} تومان</span>
 
-				<span style="color: purple;"> {{number_format(($newprice))}}</span>
-				<span style="text-decoration: line-through;"> {{number_format($oldprice)}}</span>
+					<span class="line-through"> {{number_format($oldprice)}} تومان</span>
 				@php $hasoff=1 @endphp
 			@endif
 		@endforeach

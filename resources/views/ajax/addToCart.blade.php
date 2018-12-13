@@ -1,6 +1,6 @@
 <div class="header-wrapicon2" onclick="toggleopen()">
 
-	<img src="https://statics.arastowel.com/images/icons/cart_final.png" class="header-icon1 js-show-header-dropdown" alt="سبد خرید">
+	<i class="fa fa-shopping-cart fa-2x opencart"></i>
 	<span class="header-icons-noti">{{$pre_order->count()}}</span>
 
 	<!-- Header cart noti -->

@@ -54,11 +54,18 @@ class mainController extends Controller
 
     public function showProduct($product_id, $product_title)
     {
-        $product = Product::find($product_id);
-        $products = Product::where('published', 1)->paginate(99999999999);
-        $sizes = product_to_size::all();
-        $colors = product_to_color::all();
-        return view('product-detail', compact('product', 'product_title', 'products', 'sizes', 'colors'));
+
+            $product = Product::find($product_id);
+            if ($product!=null) {
+                $products = Product::where('published', 1)->paginate(99999999999);
+                $sizes = product_to_size::all();
+                $colors = product_to_color::all();
+                return view('product-detail', compact('product', 'product_title', 'products', 'sizes', 'colors'));
+            }
+            else{
+                return abort('404');
+            }
+
 
     }
 
@@ -101,16 +108,19 @@ class mainController extends Controller
 
     public function showPost($blog_id, $blog_title)
     {
-        try {
-            $post = blog::find($blog_id);
-            $products = Product::all();
-            $sizes = product_to_size::all();
-            $tags = Tag::all();
 
-            return view('blog-detail', compact('products', 'sizes', 'post', 'tags'));
-        } catch (Exception $e) {
-            echo 'failed';
-        }
+            $post = blog::find($blog_id);
+            if ($post!=null) {
+                $products = Product::all();
+                $sizes = product_to_size::all();
+                $tags = Tag::all();
+
+                return view('blog-detail', compact('products', 'sizes', 'post', 'tags'));
+            }
+            else{
+                return abort('404');
+            }
+
     }
 
     public function blogByTag($tag_name)
@@ -188,7 +198,7 @@ class mainController extends Controller
 
     public function error403()
     {
-        return view('error.403');
+        return view('errors.403');
     }
 
 

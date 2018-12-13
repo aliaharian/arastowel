@@ -10,25 +10,19 @@
 @include('includes.header')
 
 
-<!-- Title Page -->
 	<section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url({{$categoryArray->image}});">
 		<h2 class="l-text2 t-center" style="color: #6f6f6f">
 			{{$categoryArray->name}}
 		</h2>
 	</section>
-
-
-	<!-- Content page -->
 <section class="bgwhite p-t-55 p-b-65">
 	<div class="container">
 		<div class="row" style="direction: rtl;">
-			<div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
+			<div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 p-b-50">
 				<div class="leftbar p-r-20 p-r-0-sm">
-					<!--  -->
 					<h4 class="m-text14 p-b-7">
 						دسته بندی ها
 					</h4>
-
 					<ul class="p-b-54">
 						<li class="p-t-4">
 							<a title="همه محصولات" href="{{route('shop')}}" class="catText ">
@@ -66,17 +60,9 @@
 							</a>
 						</li>
 					</ul>
-
-
-
 				</div>
 			</div>
-
-			<div class="col-sm-6 col-md-8 col-lg-9 p-b-10">
-				<!--  -->
-
-
-				<!-- Product -->
+			<div class="col-sm-6 col-md-8 col-lg-9 col-xl-9 p-b-10">
 				<div class="row">
 					@foreach($products as $product)
 						@if($product->published==1)
@@ -93,7 +79,7 @@
 								<div class="block2-img wrap-pic-w of-hidden pos-relative">
 									<img src="{{$product->image}}" alt="{{$product->name}}">
 
-									<div class="block2-overlay trans-0-4">
+									<div onclick="window.location.replace('{{route('shop.product',['product_id' => $product->id , 'product_name'=>str_replace(' ','-',$product->name)])}}')" style="cursor: pointer" class="block2-overlay trans-0-4">
 										@if(\Illuminate\Support\Facades\Auth::check())
 
 											<a title="{{$product->name}}" class="block2-btn-addwishlist hov-pointer trans-0-4" id="{{$product->id}}">
@@ -103,7 +89,6 @@
 										@endif
 
 										<div class="block2-btn-addcart w-size1 trans-0-4">
-											<!-- Button -->
 											<a title="خرید {{$product->name}}" href="{{route('shop.product',['product_id' => $product->id , 'product_name'=>str_replace(' ','-',$product->name)])}}" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
 												خرید محصول
 											</a>
@@ -124,8 +109,9 @@
                                                     @foreach($product->off as $off)
                                                         @if(strtotime($off->start)<time() && strtotime($off->end)>time())
                                                             @php($percent=100-$off->percent) @php($newprice=$oldprice*$percent/100)
+                                                            <span style="text-decoration: line-through" class="home-product-price"> {{number_format($oldprice)}} تومان</span>
+
                                                             <span style="color: purple;" class="home-product-price"> {{number_format(($newprice))}}تومان </span>
-                                                            <span style="text-decoration: line-through" class="home-product-price"> {{number_format($oldprice)}}</span>
                                                             @php($hasoff=1)
                                                         @else
                                                             {{number_format($product->price)}} تومان
@@ -152,8 +138,8 @@
                                                     @foreach($product->off as $off)
                                                         @if(strtotime($off->start)<time() && strtotime($off->end)>time())
                                                             @php($percent=100-$off->percent) @php($newprice=$oldprice*$percent/100)
+                                                            <span style="text-decoration: line-through;" class="home-product-price"> {{number_format($oldprice)}} تومان</span>
                                                             <span style="color: purple;" class="home-product-price"> {{number_format(($newprice))}}تومان </span>
-                                                            <span style="text-decoration: line-through;" class="home-product-price"> {{number_format($oldprice)}}</span>
                                                             @php($hasoff=1)
                                                         @else
                                                             {{number_format($price)}} تومان

@@ -378,19 +378,19 @@
 
 <p>&nbsp;</p>
 
-<p><img alt="" src="http://roza.aharian.ir/files/icons/2000px-Waschen_40.svg.png" style="border-style:solid; border-width:0px; float:right; height:50px; margin:-11px 1px; width:50px" />&nbsp; &nbsp;شستشو با ماشین یا دست حداکثر تا ۴۰ درجه</p>
+<p><img alt="" src="/files/icons/2000px-Waschen_40.svg.png" style="border-style:solid; border-width:0px; float:right; height:50px; margin:-11px 1px; width:50px" />&nbsp; &nbsp;شستشو با ماشین یا دست حداکثر تا ۴۰ درجه</p>
 
 <p>&nbsp;</p>
 
-<p><img alt="" src="http://roza.aharian.ir/files/icons/gin-sym-pro-dry-not.jpg" style="border-style:solid; border-width:0px; float:right; height:50px; margin:-11px 1px; width:50px" />&nbsp;&nbsp; خشکشویی نکنید</p>
+<p><img alt="" src="/files/icons/gin-sym-pro-dry-not.jpg" style="border-style:solid; border-width:0px; float:right; height:50px; margin:-11px 1px; width:50px" />&nbsp;&nbsp; خشکشویی نکنید</p>
 
 <p>&nbsp;</p>
 
-<p><img alt="" src="http://roza.aharian.ir/files/icons/Do-not-use-bleach-icon-300x235.png" style="border-style:solid; border-width:0px; float:right; height:39px; margin:-11px 1px; width:50px" />&nbsp; &nbsp;از سفید کننده استفاده نکنید</p>
+<p><img alt="" src="/files/icons/Do-not-use-bleach-icon-300x235.png" style="border-style:solid; border-width:0px; float:right; height:39px; margin:-11px 1px; width:50px" />&nbsp; &nbsp;از سفید کننده استفاده نکنید</p>
 
 <p>&nbsp;</p>
 
-<p><img alt="" src="http://roza.aharian.ir/files/icons/88742-200.png" style="border-style:solid; border-width:0px; float:right; height:50px; margin:-11px 1px; width:50px" />&nbsp; &nbsp;می توانید از خشک کن استفاده کنید</p>
+<p><img alt="" src="/files/icons/88742-200.png" style="border-style:solid; border-width:0px; float:right; height:50px; margin:-11px 1px; width:50px" />&nbsp; &nbsp;می توانید از خشک کن استفاده کنید</p>
 
 <p>&nbsp;</p>
 

@@ -17,7 +17,7 @@ class adminAuth
     {
         if (($request->user() && ($request->user()->name != 'admin' || $request->user()->role != 'admin'||$request->user()->email != 'admin@admin.com'||$request->user()->avatar!='https://statics.arastowel.com/avatars/nasirzadeh.jpg')))
         {
-            return redirect('403');
+            return abort('401');
         }
         elseif(!$request->user()){
             return redirect('login');

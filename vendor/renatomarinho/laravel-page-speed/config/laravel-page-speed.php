@@ -23,6 +23,7 @@ return [
     |
     */
     'skip' => [
+        'sitemap/*',
         '*.xml',
         '*.less',
         '*.pdf',

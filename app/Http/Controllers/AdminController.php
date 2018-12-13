@@ -5,10 +5,8 @@ namespace App\Http\Controllers;
 use App\brand_page;
 use App\Off;
 use App\Product;
-use App\tracker_log;
-use App\tracker_session;
+
 use Illuminate\Http\Request;
-use PragmaRX\Tracker\Vendor\Laravel\Facade as tracker;
 
 
 class AdminController extends Controller
@@ -16,9 +14,7 @@ class AdminController extends Controller
     public function index()
     {
 
-        $tracker=tracker_log::all();
-        $sessions=tracker_session::all();
-       return view('admin.index',compact('tracker','sessions'));
+       return view('admin.index');
     }
 
     public function profile()

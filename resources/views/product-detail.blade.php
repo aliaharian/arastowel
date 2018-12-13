@@ -6,10 +6,7 @@
          | فروشگاه اینترنتی حوله ارس
     </title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
     @include('includes.headLinks')
-    {{--seo content--}}
-
     <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
     <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" /><meta property="og:site_name" content="فروشگاه اینترنتی حوله ارس" />
     <meta property="og:locale" content="fa_IR" />
@@ -23,45 +20,92 @@
     <meta property="og:image:height" content="960">
     <meta property="og:image:type" content="image/jpg">
     <meta property="og:image:alt" content="{{$product->name}}" />
-
     <link rel="image_src" href="{{$product->image}}" />
     <meta property="og:type" content="product" />
     <meta property="article:section" content=" @foreach($product->categories as $category){{$category->name}}@endforeach" />
     <meta property="article:published_time" content="{{$product->created_at}}" />
     <meta property="article:modified_time" content="{{$product->updated_at}}" />
     <meta property="og:updated_time" content="{{$product->updated_at}}" />
-
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@ArasTowel" />
     <meta name="twitter:title" content="{{$product->name}}" />
     <meta name="twitter:image" content="{{$product->image}}" />
-
     <meta http-equiv="content-language" content="fa" />
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-
-
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-
     <meta name="DC.Identifier" content="{{route('shop.product',['product_id' => $product->id , 'product_name'=>str_replace(' ','-',$product->name)])}}"/>
     <meta name="DC.Type" content="image"/>
     <meta name="DC.Title" content="{{$product->name}}"/>
     <meta name="DC.Language" content="fa"/>
-
     <meta name="robots" content="index, follow"/>
+    <script defer src="/js/jquery-bootstrap.js"></script>
+<style>
+    .newprice{
+        display: inline-block;
+        direction: rtl;
+        color: purple;
+    }
+    .line-through{
+        text-decoration: line-through !important;
+        display: inline-block;
+        direction: rtl;
+    }
+    .displaynone {
+        display: none;
+    }
 
-    {{--seo content--}}
+    .c-ui-variant {
+        margin-left: 5px;
+        display: inline-block;
+        position: relative;
+    }
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    .c-ui-variant--color .c-ui-variant__shape {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        border-radius: 5px;
 
+        content: "";
+    }
+
+    .c-ui-variant input[type=radio] {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .c-ui-variant--color .c-ui-variant__check {
+        font-weight: normal;
+        font-family: roya;
+        color: black;
+        padding-right: 38px;
+        padding-bottom: 6px;
+        font-size: 14px;
+    }
+
+    .c-ui-variant__check {
+        cursor: pointer;
+        border: 1px solid #dedede;
+        border-radius: 5px;
+        color: #6f6f6f;
+        padding: 5px 16px;
+        font-size: 13px;
+        font-size: .929rem;
+        line-height: 1.692;
+        display: block;
+    }
+
+    .selected {
+        border: 1px solid purple;
+        border-radius: 5px;
+
+    }
+</style>
 </head>
 <body class="animsition loading">
-
-
-
-
 <input id="variable" value="{{$product->variable}}" hidden>
 <input id="productId" value="{{$product->id}}" hidden>
 <input id="productQty" value="{{$product->qty}}" hidden>
@@ -72,9 +116,7 @@
     </h1>
 
     @else
-
-<!-- breadcrumb -->
-<div class="bread-crumb bgwhite flex-w p-l-52 p-r-15 p-t-30 p-l-15-sm" style="background-color: #f2f2f2;
+    <div class="bread-crumb bgwhite flex-w p-l-52 p-r-15 p-t-30 p-l-15-sm" style="background-color: #f2f2f2;
 padding-top: 5px;
 padding-bottom: 5px;
 margin: 0 38px 0 50px;">
@@ -99,40 +141,31 @@ margin: 0 38px 0 50px;">
 			{{$product->name}}
 		</span>
 </div>
-
-<!-- Product Detail -->
-<div class="container bgwhite p-t-35 p-b-80">
+    <div class="container bgwhite p-t-35 p-b-80">
     <div class="flex-w flex-sb">
         <div class="w-size13 p-t-30 respon5">
             <div class="wrap-slick3 flex-sb flex-w">
                 <div class="wrap-slick3-dots"></div>
-
                 <div class="slick3">
-
-                    <div class="item-slick3 mainimagethumb" data-thumb="{{$product->image}}">
+                    <div class="item-slick3 mainimagethumb" data-thumb="<?=Croppa::url($product->image,86,115); ?>">
                         <div class="wrap-pic-w">
-                            <img src="{{$product->image}}" alt="{{$product->name}}" class="mainimage">
+                            <img src="<?=Croppa::url($product->image,500,667); ?>" alt="{{$product->name}}" class="mainimage">
                         </div>
                     </div>
-
-
                     @foreach($product->galleries as $gallery)
-                        <div class="item-slick3" data-thumb="{{$gallery->address}}"
+                        <div class="item-slick3" data-thumb="<?=Croppa::url($gallery->address,86,115); ?>"
                              onclick="changeimage('{{$gallery->address}}')">
                             <div class="wrap-pic-w">
-                                <img src="{{$gallery->address}}" alt="{{$product->name}}">
+                                <img src="<?=Croppa::url($gallery->address,500,667); ?>" alt="{{$product->name}}">
                             </div>
                         </div>
                     @endforeach
-
                 </div>
             </div>
         </div>
-
         <div class="w-size14 p-t-30 respon5" style="text-align: right">
             <h4 class="product-detail-name m-text16 p-b-13" style="text-align: right;font-size: 30px;">
                 {{$product->name}}
-
             </h4>
             @if($product->qty!=0)
                 @if($product->variable!=2)
@@ -142,12 +175,9 @@ margin: 0 38px 0 50px;">
                             @foreach($product->off as $off)
                                 @if(strtotime($off->start)<time() && strtotime($off->end)>time())
                                     @php $percent=100-$off->percent; $newprice=$product->price*$percent/100;  @endphp
-
                                     <span style="color: purple;"> {{number_format(($newprice))}}</span>
                                     <span style="display: inherit">تومان</span>
-
-
-                                    <span style="text-decoration: line-through;"> {{number_format($product->price)}}</span>
+                                    <span  class="line-through"> {{number_format($product->price)}}</span>
                                     <span style="display: inherit">تومان</span>
 
                                     @php $hasoff=1 @endphp
@@ -181,7 +211,6 @@ margin: 0 38px 0 50px;">
                 {!! $product->short_description !!}
             </p>
 
-            <!--  -->
             <div class="p-t-33 p-b-60">
                 @if($product->variable!=0)
                     <div class="flex-m flex-w p-b-10" style="direction: rtl">
@@ -219,7 +248,6 @@ margin: 0 38px 0 50px;">
                         </div>
                     </div>
                 @endif
-
                 @if($product->variable==2)
                     <div class="flex-m flex-w p-b-10" style="direction: rtl">
                         <div class="s-text15 w-size15 t-center">
@@ -259,7 +287,6 @@ margin: 0 38px 0 50px;">
                         </div>
                         @endif
                         <div class="btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10">
-                            <!-- Button -->
                             @if($product->variable==0 && $product->qty!=0)
                                 <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4 addtocart">
                                     افزودن به سبد خرید
@@ -276,18 +303,14 @@ margin: 0 38px 0 50px;">
                     </div>
                 </div>
             </div>
-
             <div class="p-b-45">
                 <span class="s-text8 m-l-35">کد محصول:{{$product->id}}</span>
                 <span class="s-text8">دسته بندی:
                     @foreach($product->categories as $category)
                         <a title="{{$category->name}}" href="{{route('shop.category', ['category' => $category->english_name])}}"> {{$category->name}}</a>
-                        &nbsp;
                     @endforeach
 					</span>
             </div>
-
-            <!--  -->
             @if($product->long_description!='')
                 <div class="wrap-dropdown-content bo6 p-t-15 p-b-14 active-dropdown-content" style="direction: rtl">
                     <h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
@@ -306,15 +329,15 @@ margin: 0 38px 0 50px;">
             @if($product->info!='')
 
                 <div class="wrap-dropdown-content bo7 p-t-15 p-b-14" style="direction: rtl;">
-                    <h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
+                    <h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4" id="moredetail-selector">
                         اطلاعات اضافه
                         <i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
                         <i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
                     </h5>
 
                     <div class="dropdown-content dis-none p-t-15 p-b-23">
-                        <p class="s-text8">
-                            {!! $product->info !!}
+                        <p class="s-text8" id="moredetail">
+                            <input hidden id="moredetail-text" type="text" value="{{$product->info}}">
                         </p>
                     </div>
                 </div>
@@ -322,9 +345,6 @@ margin: 0 38px 0 50px;">
         </div>
     </div>
 </div>
-
-
-<!-- Relate Product -->
 <section class="relateproduct bgwhite p-t-45 p-b-138">
     <div class="container">
         <div class="sec-title p-b-60">
@@ -332,8 +352,6 @@ margin: 0 38px 0 50px;">
                 محصولات مرتبط
             </h3>
         </div>
-
-        <!-- Slide2 -->
         <div class="wrap-slick2">
             <div class="slick2">
                 @foreach($products as $relatedproduct)
@@ -346,10 +364,9 @@ margin: 0 38px 0 50px;">
                     @if($relatedproduct->published==1&&$correct==1&&$relatedproduct->id!=$product->id)
 
                         <div class="item-slick2 p-l-15 p-r-15" style="direction: rtl">
-                            <!-- Block2 -->
                             <div class="block2">
                                 <div class="block2-img wrap-pic-w of-hidden pos-relative ">
-                                    <img src="{{$relatedproduct->image}}" alt="{{$relatedproduct->name}}">
+                                    <img src="<?=Croppa::url($relatedproduct->image, 255, 340); ?>" alt="{{$relatedproduct->name}}">
 
                                     <div class="block2-overlay trans-0-4">
                                         <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -358,7 +375,6 @@ margin: 0 38px 0 50px;">
                                         </a>
 
                                         <div class="block2-btn-addcart w-size1 trans-0-4">
-                                            <!-- Button -->
                                             <a href="{{route('shop.product',['product_id' => $relatedproduct->id , 'product_name'=>str_replace(' ','-',$relatedproduct->name)])}}"
                                                class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
                                                 خرید محصول
@@ -371,23 +387,55 @@ margin: 0 38px 0 50px;">
                                     <a title="{{$relatedproduct->name}}" href="product-detail.blade.php" class="block2-name dis-block s-text3 p-b-5 home-product-name">
                                         {{$relatedproduct->name}}
                                     </a>
-
                                     <span class="block2-price m-text6 p-r-5 home-product-price">
-									@if($relatedproduct->qty!=0)
+								 @if($relatedproduct->qty!=0)
                                             @if($relatedproduct->variable!=2)
-                                                {{number_format($relatedproduct->price)}} تومان
-                                            @else
+                                                @if($relatedproduct->off->count()>0)
+                                                    @php($oldprice=$relatedproduct->price)
+                                                    @foreach($relatedproduct->off as $off)
+                                                        @if(strtotime($off->start)<time() && strtotime($off->end)>time())
+                                                            @php($percent=100-$off->percent) @php($newprice=$oldprice*$percent/100)
+                                                            <span style="text-decoration: line-through;font-size: 18px"> {{number_format($oldprice)}} تومان </span>
 
-                                                @php $price=0 @endphp
+                                                            <span style="color: purple;font-size: 18px"> {{number_format(($newprice))}}تومان </span>
+                                                            @php($hasoff=1)
+                                                        @else
+                                                            {{number_format($relatedproduct->price)}} تومان
+
+                                                        @endif
+                                                    @endforeach
+                                                @else
+                                                    {{number_format($relatedproduct->price)}} تومان
+                                                @endif
+
+                                            @endif
+                                            @if($relatedproduct->variable==2)
+                                                @php($price=0)
 
                                                 @foreach($sizes as $size)
                                                     @if($size->product_id==$relatedproduct->id)
-
-                                                        @php $price=$size->price @endphp
+                                                        @php($price=$size->price)
                                                     @endif
 
                                                 @endforeach
-                                                {{number_format($price)}} تومان
+
+                                                @if($relatedproduct->off->count()>0)
+                                                    @php($oldprice=$price)
+                                                    @foreach($relatedproduct->off as $off)
+                                                        @if(strtotime($off->start)<time() && strtotime($off->end)>time())
+                                                            @php($percent=100-$off->percent) @php($newprice=$oldprice*$percent/100)
+                                                                <span style="text-decoration: line-through;font-size: 18px"> {{number_format($oldprice)}} تومان </span>
+                                                                <span style="color: purple;font-size: 18px"> {{number_format(($newprice))}}تومان</span>
+                                                            @php($hasoff=1)
+                                                        @else
+                                                            {{number_format($price)}} تومان
+                                                        @endif
+                                                    @endforeach
+                                                @else
+                                                    {{number_format($price)}} تومان
+                                                @endif
+
+
                                             @endif
                                         @else
                                             ناموجود
@@ -408,7 +456,6 @@ margin: 0 38px 0 50px;">
 </section>
 @endif
 
-<!-- Footer -->
 @include('includes.footer')
 @include('includes.copyright')
 
@@ -452,7 +499,6 @@ margin: 0 38px 0 50px;">
             }
         }
     }
-    ////////////////////////////////////////////
     var size=0;
     jQuery(document).ready(function () {
         jQuery('.sizepicker').click(function (e) {
@@ -479,7 +525,6 @@ margin: 0 38px 0 50px;">
 
                     },
                     success: function (response) {
-                        // What to do if we succeed
                         $('#variable_price').html(response);
                         size=0;
                     }
@@ -487,7 +532,6 @@ margin: 0 38px 0 50px;">
             )
         });
     });
-////////////////////////////////////////add to cart senario
 
      size=0;
     var color=0;
@@ -535,7 +579,6 @@ margin: 0 38px 0 50px;">
 
                     },
                     success: function (response) {
-                        // What to do if we succeed
                         $('.header-wrapicon2 ').html(response);
                         size=0;
                         color=0;
@@ -545,10 +588,6 @@ margin: 0 38px 0 50px;">
         });
     });
 
-    $( document ).ready(function() {
-
-
-    });
 
     function disable() {
         if ($('#productQty').val() - $('#num-product').val() <= 1) {
@@ -566,8 +605,48 @@ margin: 0 38px 0 50px;">
     }
 
 
-</script>
+    jQuery(document).ready(function () {
+        var flag = false;
 
+            jQuery('#moredetail-selector').click(function (e) {
+                if (flag === false){
+                var variable = $('#moredetail-text').val();
+
+                $body = $("body");
+                console.log(variable);
+
+                $(document).on({
+                    ajaxStart: function () {
+                        $body.addClass("loading");
+                    },
+                    ajaxStop: function () {
+                        $body.removeClass("loading");
+                    }
+                });
+
+                jQuery.ajax({
+
+                        url: "{{ route('more-info') }}",
+                        method: 'get',
+                        data: {
+                            variable: variable
+
+                        },
+                        success: function (response) {
+                            $('#moredetail ').html(response);
+                            flag = true;
+                            console.log(flag);
+                        }
+                    }
+                )
+            }
+            });
+
+
+    });
+
+
+</script>
 
 </body>
 </html>

@@ -5,8 +5,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 	@include('includes.headLinks')
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script defer src="/js/jquery-bootstrap.js"></script>
+
 </head>
 <body class="animsition loading">
 
@@ -14,7 +14,7 @@
 
 
 <!-- Title Page -->
-	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(https://statics.arastowel.com/images/aboutusheader.jpg);">
+	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(/files/about/aboutusheader.jpg);">
 		<h1 class="l-text2 t-center" style="color: #fff">
 			درباره حوله ارس
 		</h1>
@@ -33,19 +33,19 @@
 						<!-- Wrapper for slides -->
 						<div class="carousel-inner">
 							<div class="item active">
-								<img alt="درباره حوله ارس" src="https://statics.arastowel.com/images/about-us.jpg" >
+								<img alt="درباره حوله ارس" src="/files/about/about-us.jpg" >
 							</div>
 
 							<div class="item">
-								<img alt="کارخانه حوله ارس" src="https://statics.arastowel.com/images/Aras1.jpg">
+								<img alt="کارخانه حوله ارس" src="/files/about/Aras1.jpg">
 							</div>
 
 							<div class="item">
-								<img alt="کارخانه تولیدی فروشگاه اینترنتی ارس" src="https://statics.arastowel.com/images/Aras3.jpg" >
+								<img alt="کارخانه تولیدی فروشگاه اینترنتی ارس" src="/files/about/Aras3.jpg" >
 							</div>
 
 							<div class="item">
-								<img alt="تولید و بسته بندی حوله ارس" src="https://statics.arastowel.com/images/Aras4.jpg" >
+								<img alt="تولید و بسته بندی حوله ارس" src="/files/about/Aras4.jpg" >
 							</div>
 						</div>
 				</div>

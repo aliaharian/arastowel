@@ -3,11 +3,10 @@
 <!-- Tell the browser to be responsive to screen width -->
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <!-- Bootstrap 3.3.7 -->
-<link rel="stylesheet" href="https://statics.arastowel.com/panel-admin/css/bootstrap-theme.css">
+<link rel="stylesheet" href="/css/main.min.css">
 <!-- Bootstrap rtl -->
 <link rel="stylesheet" href="https://statics.arastowel.com/panel-admin/css/rtl.css">
 <!-- Font Awesome -->
-<link rel="stylesheet" href="https://statics.arastowel.com/panel-admin/css/font-awesome.min.css">
 <!-- Ionicons -->
 <link rel="stylesheet" href="https://statics.arastowel.com/panel-admin/css/ionicons.min.css">
 <!-- jvectormap -->

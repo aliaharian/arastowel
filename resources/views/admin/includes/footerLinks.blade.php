@@ -1,5 +1,5 @@
 <!-- jQuery 3 -->
-<script src="https://statics.arastowel.com/panel-admin/js/jquery.min.js"></script>
+<script src="/js/main.min.js"></script><script src="/js/main2.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="https://statics.arastowel.com/panel-admin/js/bootstrap.min.js"></script>
 <!-- FastClick -->

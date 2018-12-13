@@ -4,11 +4,12 @@
             <h4 class="s-text12 m-b-30" style="direction: rtl;text-align: right;">با ما در ارتباط باشید</h4>
 
             <div>
-                <div class="s-text7 w-size27" style="direction: rtl;font-size: 16px;" >
-                    <p style="color: #ccc"><img alt="" src="<?=Croppa::url('/files/phone_footer.png', 20, 19); ?>" style="width:20px" /> ۰۲۱-۸۸۹۳۲۷۶۸ &nbsp;<br />
-                        <img alt="شماره موبایل" src="<?=Croppa::url('/files/mobile_footer.png', 20, 36); ?>" style="margin-right:3px; width:20px" /> ۰۹۱۲-۷۲۵۷۹۶۲&zwnj;&nbsp;</p>
 
-                    <p style="color: #ccc"><img alt="آدرس ایمیل" src="<?=Croppa::url('/files/mailfooter.png', 20, 13); ?>" style="margin-right:3px; width:20px" /><a title="ایمیل حوله ارس" href="mailto:info@arastowel.com" style="color: #ccc"> info[at]arastowel.com </a></p>
+                <div class="s-text7 w-size27" itemscope itemtype="https://schema.org/Organization" style="direction: rtl;font-size: 16px;" >
+                    <p style="color: #ccc" itemprop="telephone fa-2x"><i class="fa fa-phone"></i> ۰۲۱-۸۸۹۳۲۷۶۸ &nbsp;<br />
+                        <i class="fa fa-mobile fa-2x"></i> ۰۹۱۲-۷۲۵۷۹۶۲&zwnj;&nbsp;</p>
+
+                    <p style="color: #ccc"><i class="fa fa-envelope-o"></i><a itemprop="email" title="ایمیل حوله ارس" href="mailto:info@arastowel.com" style="color: #ccc"> info[at]arastowel[dot]com </a></p>
 
 
                 </div>
@@ -94,7 +95,7 @@
 
         <div class="w-size8 p-t-30 p-l-15 p-r-15 respon3">
             <h4 class="s-text12 m-b-30" style="direction: rtl;text-align: right;">بلاگ</h4>
-            <div class="blog row">
+            <div class="blog row" style="margin-right: 0">
                 <ul style="direction: rtl;text-align: right;">
                     @php
                         $posts=\App\blog::where('published',1)->orderBy('updated_at', 'desc')->limit(3)->get();

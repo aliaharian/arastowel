@@ -1,38 +1,20 @@
+
+
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" type="text/css" href="/css/main.min.css">
 
 <link rel="icon" type="image/png" href="https://statics.arastowel.com/images/icons/favicon.png"/>
 <!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="https://statics.arastowel.com/vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="https://statics.arastowel.com/fonts/themify/themify-icons.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="https://statics.arastowel.com/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="https://statics.arastowel.com/fonts/elegant-font/html-css/style.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="https://statics.arastowel.com/vendor/animate/animate.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="https://statics.arastowel.com/vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="https://statics.arastowel.com/vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="https://statics.arastowel.com/vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="https://statics.arastowel.com/vendor/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
 <link rel="stylesheet" type="text/css" href="https://statics.arastowel.com/vendor/slick/slick.css">
 <!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="https://statics.arastowel.com/vendor/lightbox2/css/lightbox.min.css">
-<!--===============================================================================================-->
-
-<link rel="stylesheet" type="text/css" href="/css/util.css">
-<link rel="stylesheet" type="text/css" href="/css/main.css">
-<link rel="stylesheet" type="text/css" href="https://statics.arastowel.com/css/ajax-cart.css">
-<!--===============================================================================================-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110406743-1"></script>
+<script>
+    function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-110406743-1");
+</script>
 {{--favicons--}}
 <link rel="apple-touch-icon" sizes="57x57" href="https://statics.arastowel.com/images/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="https://statics.arastowel.com/images/apple-icon-60x60.png">
@@ -85,74 +67,7 @@
 
 
 
-<script>
-    function deleteorder(id) {
-        {{--delete pre order--}}
-                $body = $("body");
-                console.log('aaa');
-                var pre_order_id = id;
-                $(document).on({
-                    ajaxStart: function () {
-                        $body.addClass("loading");
-                    },
-                    ajaxStop: function () {
-                        $body.removeClass("loading");
-                    }
-                });
-
-                jQuery.ajax({
-
-                        url: "{{ route('deleteFromCart') }}",
-                        method: 'get',
-                        data: {
-                            pre_order_id: pre_order_id
-                        },
-                        success: function (response) {
-                            // What to do if we succeed
-                            $('.header-wrapicon2 ').html(response);
-                        }
-                    }
-                );
-                swal("محصول مورد نظر", "با موفقیت از سبد خرید حذف شد", "warning");
-
-    }
-
-
-</script>
 <style>
+    .displaynone{display:none}.modal{display:none;position:fixed;z-index:1000;top:0;left:0;height:100%;width:100%;background:rgba(255,255,255,1) 50% 50% no-repeat}body.loading .modal{overflow:hidden;display:block}.newprice{display:inline-block;direction:rtl;color:purple}.line-through{text-decoration:line-through!important;display:inline-block;direction:rtl}
 
-    .displaynone {
-        display: none;
-    }
-
-    /* Start by setting display:none to make this hidden.
-Then we position it in relation to the viewport window
-with position:fixed. Width, height, top and left speak
-for themselves. Background we set to 80% white with
-our animation centered, and no-repeating */
-    .modal {
-        display:    none;
-        position:   fixed;
-        z-index:    1000;
-        top:        0;
-        left:       0;
-        height:     100%;
-        width:      100%;
-        background: rgba( 255, 255, 255, 1 )
-        50% 50%
-        no-repeat;
-    }
-
-    /* When the body has the loading class, we turn
-       the scrollbar off with overflow:hidden */
-    body.loading .modal {
-        overflow: hidden;
-    }
-
-    /* Anytime the body has the loading class, our
-       modal element will be visible */
-    body.loading .modal {
-        display: block;
-    }
-</style>
 @php date_default_timezone_set("Asia/Tehran") @endphp

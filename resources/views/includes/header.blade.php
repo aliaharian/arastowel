@@ -33,23 +33,19 @@
             $pre_order=\App\Pre_order::where('user_ip',$user_ip)->where('user_platform',$user_platform)->where('user_browser',$user_browser)->get();
 @endphp
 
-{{--preload--}}
 <div class="modal">
 	<div class="animsition-loading-1">
 		<div data-loader="ball-scale">
 		</div>
 	</div>
 </div>
-{{--preload--}}
 
-<!-- header fixed -->
+
 <div class="wrap_header fixed-header2 trans-0-4">
-	<!-- Logo -->
 	<a title="حوله ارس" href="{{route('index')}}" class="logo">
-		<img src="https://statics.arastowel.com/images/aras_logo_final.png" alt="حوله ارس" title="حوله ارس">
+		<img src="/svg/final.svg" height="32" alt="حوله ارس" title="حوله ارس">
 	</a>
 
-	<!-- Menu -->
 	<div class="wrap_menu">
 		<nav class="menu">
 			<ul class="main_menu">
@@ -80,13 +76,12 @@
 		</nav>
 	</div>
 
-	<!-- Header Icon -->
 	<div class="header-icons">
 		<a title="ورود به حوله ارس" href="{{route('login')}}" class="header-wrapicon1 dis-block">
 			@if(\Illuminate\Support\Facades\Auth::check())
-			<img src="https://statics.arastowel.com/images/icons/loggeduser_final.png" class="header-icon1" alt="ورود به حوله ارس" title="ورود به حوله ارس">
+			<img src="/files/loggeduser_final.png" class="header-icon1" alt="ورود به حوله ارس" title="ورود به حوله ارس" width="27">
 				@else
-				<img src="https://statics.arastowel.com/images/icons/user.png" class="header-icon1" alt="ورود به حوله ارس" title="ورود به حوله ارس">
+				<img src="/files/user.png" class="header-icon1" alt="ورود به حوله ارس" title="ورود به حوله ارس" width="27">
 			@endif
 		</a>
 
@@ -94,10 +89,9 @@
 
         <div class="header-wrapicon2" >
 
-            <img src="https://statics.arastowel.com/images/icons/cart_final.png" class="header-icon1 js-show-header-dropdown" alt="سبد خرید" title="سبد خرید">
+			<i class="fa fa-shopping-cart fa-2x opencart"></i>
             <span class="header-icons-noti">{{$pre_order->count()}}</span>
 
-            <!-- Header cart noti -->
             <div class="header-cart header-dropdown c-navi-list__dropdown c-navi-list__basket-dropdown js-dropdown-menu" style="display: block;">
                 @if($pre_order->count()!=0)
 
@@ -125,11 +119,11 @@
                     @foreach($pre_order as $order)
 
                         <li class="js-mini-cart-item">
-                            <button class="c-navi-list__basket-item-remove" id="{{$order->id}}" onclick="deleteorder(this.id);">X</button>
+                            <button class="c-navi-list__basket-item-remove" style="text-align: center" id="{{$order->id}}" onclick="deleteorder(this.id);">X</button>
 
                             <div class="c-navi-list__basket-item-content">
                                 <div class="c-navi-list__basket-item-image">
-                                    <img alt="{{\App\Product::find($order->product_id)->name}}" title="{{\App\Product::find($order->product_id)->name}}" src="{{$order->image}}">
+                                    <img alt="{{\App\Product::find($order->product_id)->name}}" title="{{\App\Product::find($order->product_id)->name}}" src="{{$order->image}}" width="45">
                                 </div>
                                 <div class="c-navi-list__basket-item-details">
                                     <div class="c-navi-list__basket-item-title">
@@ -177,7 +171,6 @@
     </div>
 </div>
 
-<!-- top noti -->
 <div class="flex-c-m size22 bg0 s-text21 pos-relative">
 	@php
 		$agent=new \Jenssegers\Agent\Agent();
@@ -193,10 +186,8 @@
 
 </div>
 
-<!-- Header -->
 <header class="header2">
-	<!-- Header desktop -->
-	<div class="container-menu-header-v2 p-t-26">
+	<div class="container-menu-header-v2 p-t-26" style="background: #fff">
 		<div class="topbar2">
 			<div class="topbar-social">
 				<a title="فیسبوک" href="https://www.facebook.com/Arastowel/" target="_blank" class="topbar-social-item fa fa-facebook"></a>
@@ -207,39 +198,29 @@
 				<a title="یوتوب" href="https://www.youtube.com/channel/UCbPadIvVrH0MIciIZz52SGA" target="_blank" class="topbar-social-item fa fa-youtube"></a>
 			</div>
 
-			<!-- Logo2 -->
 			<a title="حوله ارس" href="{{route('index')}}" class="logo2">
-				<img src="https://statics.arastowel.com/images/aras_logo_final.png" alt="حوله ارس" title="حوله ارس">
+				<img src="/svg/final.svg" height="32" alt="حوله ارس" title="حوله ارس">
 			</a>
 
 			<div class="topbar-child2" style="direction: ltr">
 
 
-				{{--<div class="topbar-language rs1-select2">--}}
-					{{--<select class="selection-1" name="time">--}}
-						{{--<option>Fa</option>--}}
-						{{--<option>En</option>--}}
-						{{--<option>Ar</option>--}}
-						{{--<option>Tr</option>--}}
-					{{--</select>--}}
-				{{--</div>--}}
 
-				<!--  -->
+
 				<a title="ورود به حوله ارس" href="{{route('login')}}" class="header-wrapicon1 dis-block m-l-30">
 					@if(\Illuminate\Support\Facades\Auth::check())
-						<img src="https://statics.arastowel.com/images/icons/loggeduser_final.png" class="header-icon1" alt="کاربر وارد شده">
+						<img src="/files/loggeduser_final.png" width="27" class="header-icon1" alt="کاربر وارد شده">
 					@else
-						<img src="https://statics.arastowel.com/images/icons/user.png" class="header-icon1" alt="کاربر مهمان">
+						<img src="/files/user.png" class="header-icon1" alt="ورود به حوله ارس" title="ورود به حوله ارس" width="27">
 					@endif				</a>
 
 				<span class="linedivide1"></span>
 
                 <div class="header-wrapicon2" >
 
-                    <img src="https://statics.arastowel.com/images/icons/cart_final.png" class="header-icon1 js-show-header-dropdown" alt="سبد خرید">
-                    <span class="header-icons-noti">{{$pre_order->count()}}</span>
+					<i class="fa fa-shopping-cart fa-2x opencart"></i>
+					<span class="header-icons-noti">{{$pre_order->count()}}</span>
 
-                    <!-- Header cart noti -->
                     <div class="header-cart header-dropdown c-navi-list__dropdown c-navi-list__basket-dropdown js-dropdown-menu" style="display: block;">
                         @if($pre_order->count()!=0)
 
@@ -267,11 +248,11 @@
                             @foreach($pre_order as $order)
 
                                 <li class="js-mini-cart-item">
-                                    <button class="c-navi-list__basket-item-remove" id="{{$order->id}}" onclick="deleteorder(this.id);">X</button>
+                                    <button class="c-navi-list__basket-item-remove" style="text-align: center" id="{{$order->id}}" onclick="deleteorder(this.id);">X</button>
 
                                     <div class="c-navi-list__basket-item-content">
                                         <div class="c-navi-list__basket-item-image">
-                                            <img alt="{{\App\Product::find($order->product_id)->name}}" src="{{$order->image}}">
+                                            <img alt="{{\App\Product::find($order->product_id)->name}}" width="45" src="{{$order->image}}">
                                         </div>
                                         <div class="c-navi-list__basket-item-details">
                                             <div class="c-navi-list__basket-item-title">
@@ -334,7 +315,6 @@
 
 		<div class="wrap_header">
 
-			<!-- Menu -->
 			<div class="wrap_menu">
 				<nav class="menu">
 					<ul class="main_menu">
@@ -365,39 +345,33 @@
 				</nav>
 			</div>
 
-			<!-- Header Icon -->
 			<div class="header-icons">
 
 			</div>
 		</div>
 	</div>
 
-	<!-- Header Mobile -->
 	<div class="wrap_header_mobile">
-		<!-- Logo moblie -->
 		<a title="حوله ارس" href="{{route('index')}}" class="logo-mobile">
-			<img src="https://statics.arastowel.com/images/aras_logo_final.png" alt="حوله ارس">
+			<img src="/svg/final.svg" height="32" alt="حوله ارس">
 		</a>
 
-		<!-- Button show menu -->
 		<div class="btn-show-menu">
-			<!-- Header Icon mobile -->
 			<div class="header-icons-mobile">
 				<a title="ورود به حوله ارس" href="{{route('login')}}" class="header-wrapicon1 dis-block">
 					@if(\Illuminate\Support\Facades\Auth::check())
-						<img src="https://statics.arastowel.com/images/icons/loggeduser_final.png" class="header-icon1" alt="ورود به حوله ارس">
+						<img src="/files/loggeduser_final.png" class="header-icon1" width="27" alt="ورود به حوله ارس">
 					@else
-						<img src="https://statics.arastowel.com/images/icons/user.png" class="header-icon1" alt="ورود به حوله ارس">
+						<img src="/files/user.png" class="header-icon1" alt="ورود به حوله ارس" title="ورود به حوله ارس" width="27">
 					@endif				</a>
 
 				<span class="linedivide2"></span>
 
                 <div class="header-wrapicon2" >
 
-                    <img src="https://statics.arastowel.com/images/icons/cart_final.png" class="header-icon1 js-show-header-dropdown" alt="سبد خرید">
+					<i class="fa fa-shopping-cart fa-2x opencart"></i>
                     <span class="header-icons-noti">{{$pre_order->count()}}</span>
 
-                    <!-- Header cart noti -->
                     <div class="header-cart header-dropdown c-navi-list__dropdown c-navi-list__basket-dropdown js-dropdown-menu" style="display: block;">
                         @if($pre_order->count()!=0)
 
@@ -425,11 +399,11 @@
                             @foreach($pre_order as $order)
 
                                 <li class="js-mini-cart-item">
-                                    <button class="c-navi-list__basket-item-remove" id="{{$order->id}}" onclick="deleteorder(this.id);">X</button>
+                                    <button class="c-navi-list__basket-item-remove" style="text-align: center" id="{{$order->id}}" onclick="deleteorder(this.id);">X</button>
 
                                     <div class="c-navi-list__basket-item-content">
                                         <div class="c-navi-list__basket-item-image">
-                                            <img alt="{{\App\Product::find($order->product_id)->name}}" src="{{$order->image}}">
+                                            <img alt="{{\App\Product::find($order->product_id)->name}}" width="45" src="{{$order->image}}">
                                         </div>
                                         <div class="c-navi-list__basket-item-details">
                                             <div class="c-navi-list__basket-item-title">
@@ -484,7 +458,6 @@
 		</div>
 	</div>
 
-	<!-- Menu Mobile -->
 	<div class="wrap-side-menu" >
 		<nav class="side-menu">
 			<ul class="main-menu">
@@ -493,19 +466,12 @@
 					<div class="topbar-child2-mobile" style="direction: ltr">
 
 
-						{{--<div class="topbar-language rs1-select2">--}}
-							{{--<select class="selection-1" name="time">--}}
-								{{--<option>Fa</option>--}}
-								{{--<option>En</option>--}}
-								{{--<option>Ar</option>--}}
-								{{--<option>Tr</option>--}}
-							{{--</select>--}}
-						{{--</div>--}}
+
 					</div>
 				</li>
 
 				<li class="item-topbar-mobile p-l-10">
-					<div class="topbar-social-mobile">
+					<div class="topbar-social-mobile" style="text-align: center">
 						<a title="فیسبوک" href="https://www.facebook.com/Arastowel/" target="_blank" class="topbar-social-item fa fa-facebook"></a>
 						<a title="اینستاگرام" href="https://www.instagram.com/arastowel/" target="_blank" class="topbar-social-item fa fa-instagram"></a>
 						<a title="پینترست" href="https://www.pinterest.com/arastowel/" class="topbar-social-item fa fa-pinterest-p" target="_blank"></a>

@@ -3,11 +3,11 @@
 <head>
     <title>پروفایل کاربری - فروشگاه اینترنتی حوله ارس</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://statics.arastowel.com/css/profile.css">
+    <link rel="stylesheet" href="https://arastowel.com/css/profile.css">
 
     @include('includes.headLinks')
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script defer src="/js/jquery-bootstrap.js"></script>
+
 </head>
 <body >
 

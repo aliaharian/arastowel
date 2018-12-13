@@ -8,18 +8,17 @@
 	<meta name="keywords"
 		  content="فروشگاه اینترنتی, خرید آنلاین، حوله, تن پوش, پالتویی, استخری, حمام, آشپر خانه, کالای خواب,سرویس عروس و داماد, حوله هدیه, فروش اینترنتی، حوله ارس، حوله تبلیغاتی"/>
     @include('includes.headLinks')
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script defer src="/js/jquery-bootstrap.js"></script>
+
 </head>
 <body class="animsition loading">
 
 @include('includes.header')
-	<!-- Slide1 -->
 	<section class="slide1">
 		<div class="wrap-slick1">
 			<div class="slick1">
 
-				<div class="item-slick1 item1-slick1" style="background-image: url('https://statics.arastowel.com/images/14.jpg');">
+				<div class="item-slick1 item1-slick1">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 
 
@@ -29,7 +28,7 @@
 					</div>
 				</div>
 
-				<div class="item-slick1 item2-slick1" style="background-image: url('https://statics.arastowel.com/images/header2.jpg');">
+				<div class="item-slick1 item2-slick1">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 
 						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="slideInUp">
@@ -38,7 +37,7 @@
 					</div>
 				</div>
 
-                <div class="item-slick1 item3-slick1" style="background-image: url('https://statics.arastowel.com/images/header3.jpg');">
+                <div class="item-slick1 item3-slick1">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 
 
@@ -48,7 +47,7 @@
                     </div>
                 </div>
 
-                <div class="item-slick1 item3-slick1" style="background-image: url('https://statics.arastowel.com/images/13.jpg');">
+                <div class="item-slick1 item4-slick1">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 
 
@@ -61,7 +60,7 @@
 			</div>
 		</div>
 	</section>
-<section class="banner bgwhite p-t-40 p-b-40" style="background-color: #c788bc;height: 150px;">
+<section class="banner bgwhite p-t-40 p-b-40" style="background-color: #c788bc;height: 150px;" id="cat-section">
 	<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-50 p-b-170">
 
 						<span class="caption1-slide1 m-text1 t-center m-b-15">
@@ -73,14 +72,13 @@
 	</h2>
 	</div>
 </section>
-	<!-- Banner -->
 	<section class="banner bgwhite p-t-70 p-b-40" style="background-color: white">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 					<!-- block1 -->
 					<div class="block1 hov-img-zoom pos-relative m-b-30">
-						<img data-src="https://statics.arastowel.com/images/29.jpg" alt="حوله های ابعادی">
+						<img data-src="/files/29-400x518.jpg" width="350"  alt="حوله های ابعادی">
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
@@ -92,7 +90,7 @@
 
 					<!-- block1 -->
 					<div class="block1 hov-img-zoom pos-relative m-b-30">
-						<img data-src="https://statics.arastowel.com/images/30.jpg" alt="حوله هدیه">
+						<img data-src="/files/giftfinal-400x367.jpg" width="350" alt="حوله هدیه">
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
@@ -106,7 +104,7 @@
 				<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 					<!-- block1 -->
 					<div class="block1 hov-img-zoom pos-relative m-b-30">
-						<img data-src="https://statics.arastowel.com/images/Bathroob_final.jpg" alt="حوله تن پوش و پالتویی">
+						<img data-src="/files/Bathroob_final-400x367.jpg" width="350"  alt="حوله تن پوش و پالتویی">
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
@@ -118,7 +116,7 @@
 
 					<!-- block1 -->
 					<div class="block1 hov-img-zoom pos-relative m-b-30">
-						<img data-src="https://statics.arastowel.com/images/34.jpg" alt="حوله تبلیغاتی">
+						<img data-src="/files/34-400x518.jpg" width="350"  alt="حوله تبلیغاتی">
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
@@ -132,7 +130,7 @@
 				<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 					<!-- block1 -->
 					<div class="block1 hov-img-zoom pos-relative m-b-30">
-						<img data-src="https://statics.arastowel.com/images/kids_final.jpg" alt="حوله تن پوش کودک">
+						<img data-src="/files/kids_final-400x518.jpg" width="350" alt="حوله تن پوش کودک">
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
@@ -144,7 +142,7 @@
 
 					<!-- block2 -->
 					<div class="block2 wrap-pic-w pos-relative m-b-30">
-						<img data-src="https://statics.arastowel.com/images/Aras2.jpg" alt="ثبت نام در حوله ارس">
+						<img data-src="/files/Aras2-400x367.jpg" width="350" alt="ثبت نام در حوله ارس">
 
 						<div class="block2-content sizefull ab-t-l flex-col-c-m">
 							<h4 class="m-text4 t-center w-size3 p-b-8">
@@ -174,7 +172,7 @@
 		<div class="row">
 			<div class="col-sm-10 col-md-8 col-lg-6 m-l-r-auto p-t-15 p-b-15">
 				<div class="hov-img-zoom pos-relative">
-					<img data-src="https://statics.arastowel.com/images/towel-1.jpg" alt="تضمین کیفیت و سلامتی با حوله ارس">
+					<img data-src="/files/towel-1.jpg" width="540" alt="تضمین کیفیت و سلامتی با حوله ارس">
 
 					<div class="ab-t-l sizefull flex-col-c-m p-l-15 p-r-15">
 							<span class="m-text9 p-t-45 fs-20-sm" style="direction: rtl!important;text-align: center;font-size: 22px">
@@ -188,7 +186,7 @@
 							انتخاب حوله ارس
 						</h3>
 
-						<span class="btn-play s-text4 hov5 cs-pointer p-t-25" style="margin-top: 20px;font-size: 20px;border: 1px white solid;padding: 10px 27px;border-radius: 60px;" data-toggle="modal" data-target="#modal-video-01">
+						<span class="btn-play s-text4 hov5 cs-pointer p-t-25" style="margin-top: 20px;font-size: 20px;border: 1px white solid;padding: 10px 27px;border-radius: 60px;" data-toggle="modal" data-target="#modal-video-01" onclick="video()">
 					<i class="fa fa-play" aria-hidden="true"></i>
 					مشاهده کلیپ
 				</span>
@@ -196,15 +194,17 @@
 				</div>
 			</div>
 
+			<div class="modal fade" id="modal-video-01" role="dialog">
+				<div class="modal-dialog">
 
-			<div class="modal fade" id="modal-video-01" tabindex="-1" role="dialog" aria-hidden="true">
+					<!-- Modal content-->
+					<div class="modal-content">
 
-				<div class="modal-dialog" role="document" data-dismiss="modal">
-					<div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
+						<div class="modal-body video">
+						</div>
 
-					<video controls>
-						<source src="https://statics.arastowel.com/images/aras.mp4" type="video/mp4">
-					</video>
+					</div>
+
 				</div>
 			</div>
 
@@ -214,11 +214,11 @@
 					@foreach($product->off as $off)
 					@if($off->special==1)
 				<div class="bgwhite hov-img-zoom pos-relative p-b-20per-ssm">
-					<img data-src="{{$off->image}}" alt="{{$off->text}}">
+					<img data-src="{{$off->image}}" alt="{{$off->text}}" width="540" >
 
 					<div class="ab-t-l sizefull flex-col-c-b p-l-15 p-r-15 p-b-20">
 						<div class="t-center" style="background-color: white;padding: 0 4px;">
-							<a title="{{$product->name}}" href="{{route('shop.product',['product_id' => $product->id , 'product_name'=>str_replace(' ','-',$product->name)])}}" style="position: relative;width: 103%!important;background: #ff9600;color: #fff;font-size: 27px;transform: translateX(-4px);" class="dis-block s-text3 p-b-5">{{$off->text}}</a>
+							<a  title="{{$product->name}}" href="{{route('shop.product',['product_id' => $product->id , 'product_name'=>str_replace(' ','-',$product->name)])}}" style="position: relative;text-align:center;width: 103%!important;background: #ff9600;color: #fff;font-size: 27px;transform: translateX(-4px);" class="dis-block s-text3 p-b-5">{{$off->text}}</a>
 
 							@if($product->variable!=2)
 								@if($product->off->count()>0)
@@ -329,75 +329,11 @@
 
 
 <!-- Instagram -->
-@php
-	$JSON=null;
-        $url = 'https://www.instagram.com/explore/tags/arastowel/?__a=1';
-        $JSON = @file_get_contents($url);
-@endphp
-@if($JSON!=null)
-@php
-    $data = json_decode($JSON);
-        @$data2=$data->graphql->hashtag->edge_hashtag_to_media->edges;
-@endphp
-<section class="instagram p-t-40 p-b-50">
-	<div class="sec-title p-b-35 p-l-15 p-r-15">
-		<h3 class="m-text5 t-center">
-			ما را در اینستاگرام دنبال کنید
-		</h3>
-	</div>
+<div class="loadinsta">
 
-	<div class="flex-w" id="insta">
-		<!-- Block4 -->
-		@php $i=0 @endphp
-		@foreach ($data2 as $datas)
-			@if($i<5)
-				<div class="block4 wrap-pic-w">
-					@php  $j=0;  @endphp
-					@foreach($datas->node->thumbnail_resources as $thumbnail)
-						@if($j<3)
-						@php  $thumb=$thumbnail->src; $j=$j+1;  @endphp
-						@endif
-						@endforeach
-					<img data-src="{{$thumb}}"  alt="	@php
-                        $captions=$datas->node->edge_media_to_caption->edges;
-                    @endphp
-                    @foreach($captions as $caption)
-                    {{$caption->node->text}}
-                    @endforeach
-                            ">
+</div>
 
-					<a title="@php
-						$captions=$datas->node->edge_media_to_caption->edges;
-					@endphp
-					@foreach($captions as $caption)
-					{{$caption->node->text}}
-					@endforeach" href="https://instagram.com/p/{{$datas->node->shortcode}}" target="_blank" class="block4-overlay sizefull ab-t-l trans-0-4">
-					<span class="block4-overlay-heart s-text9 flex-m trans-0-4 p-l-40 p-t-25">
-						<i class="fa fa-heart-o fs-20 p-r-12" aria-hidden="true"></i>
-						<span class="p-t-2">{{$datas->node->edge_liked_by->count}}</span>
-					</span>
 
-						<div class="block4-overlay-txt trans-0-4 p-l-40 p-r-25 p-b-30">
-							<p class="s-text10 m-b-15 h-size1 of-hidden">
-								@php
-									$captions=$datas->node->edge_media_to_caption->edges;
-								@endphp
-								@foreach($captions as $caption)
-									{{$caption->node->text}}
-								@endforeach
-
-							</p>
-						</div>
-					</a>
-				</div>
-				@php $i = $i+1 @endphp
-			@endif
-		@endforeach
-	</div>
-</section>
-@endif
-
-	<!-- New Product -->
 	<section class="newproduct  p-t-40 p-b-60" style="background-color: #fff">
 		<div class="container">
 			<div class="sec-title p-b-35">
@@ -406,18 +342,16 @@
 				</h3>
 			</div>
 
-			<!-- Slide2 -->
 			<div class="wrap-slick2">
 				<div class="slick2">
 				@foreach($products as $product)
 					@if($product->featured==1 && $product->published==1)
 					<div class="item-slick2 p-l-15 p-r-15" style="direction: rtl;">
-						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img data-src="<?=Croppa::url($product->image, 270, 360); ?>" alt="{{$product->name}}">
+								<img data-src="<?=Croppa::url($product->image, 270, 360); ?>" width="270" alt="{{$product->name}}">
 
-								<div class="block2-overlay trans-0-4">
+								<div class="block2-overlay trans-0-4" onclick="window.location.replace('{{route('shop.product',['product_id' => $product->id , 'product_name'=>str_replace(' ','-',$product->name)])}}')" style="cursor: pointer" >
 									@if(\Illuminate\Support\Facades\Auth::check())
 
 										<a title="{{$product->name}}" class="block2-btn-addwishlist hov-pointer trans-0-4" id="{{$product->id}}">
@@ -427,7 +361,6 @@
 									@endif
 
 									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<!-- Button -->
 										<a title="{{$product->name}}" href="{{route('shop.product',['product_id' => $product->id , 'product_name'=>str_replace(' ','-',$product->name)])}}" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
 											خرید محصول										</a>
 										</button>
@@ -447,9 +380,9 @@
 												@foreach($product->off as $off)
 													@if(strtotime($off->start)<time() && strtotime($off->end)>time())
 														@php($percent=100-$off->percent) @php($newprice=$oldprice*$percent/100)
+														<span style="text-decoration: line-through;font-size: 18px"> {{number_format($oldprice)}} تومان </span>
 
 														<span style="color: purple;font-size: 18px"> {{number_format(($newprice))}}تومان </span>
-														<span style="text-decoration: line-through;font-size: 18px"> {{number_format($oldprice)}} تومان </span>
 														@php($hasoff=1)
 													@else
 														{{number_format($product->price)}} تومان
@@ -476,8 +409,9 @@
 												@foreach($product->off as $off)
 													@if(strtotime($off->start)<time() && strtotime($off->end)>time())
 														@php($percent=100-$off->percent) @php($newprice=$oldprice*$percent/100)
-														<span style="color: purple;font-size: 18px"> {{number_format(($newprice))}}تومان</span>
-														<span style="text-decoration: line-through;font-size: 18px"> {{number_format($oldprice)}} تومان </span>
+															<span style="text-decoration: line-through;font-size: 18px"> {{number_format($oldprice)}} تومان </span>
+
+															<span style="color: purple;font-size: 18px"> {{number_format(($newprice))}}تومان</span>
 														@php($hasoff=1)
 													@else
 														{{number_format($price)}} تومان
@@ -518,71 +452,7 @@
 
 @include('includes.footerLinks')
 <script>
-    window.addEventListener('load', function(){
-        var allimages= document.getElementsByTagName('img');
-        for (var i=0; i<allimages.length; i++) {
-            if (allimages[i].getAttribute('data-src')) {
-                allimages[i].setAttribute('src', allimages[i].getAttribute('data-src'));
-            }
-        }
-    }, false)
-</script>
-<script>
-    $('body').on('hidden.bs.modal', '.modal', function () {
-        $('video').trigger('pause');
-    });
-
-
-    jQuery(document).ready(function () {
-        jQuery('#newsletter').click(function (e) {
-            if ($('#email-news').val() !== '') {
-            $body = $("body");
-
-            $(document).on({
-                ajaxStart: function () {
-                    $body.addClass("loading");
-                },
-                ajaxStop: function () {
-                    $body.removeClass("loading");
-                }
-            });
-
-            jQuery.ajax({
-
-                    url: "{{ route('newsletter') }}",
-                    method: 'get',
-                    data: {
-                        email: $('#email-news').val()
-
-                    },
-                    success: function (response) {
-                        // What to do if we succeed
-                        console.log('newsletterOk');
-                    }
-                }
-            )
-        }
-        });
-    });
-
-        $('#newsletter').each(function () {
-
-                $(this).on('click', function () {
-                    if ($('#email-news').val() !== '') {
-
-                        swal("ایمیل شما", "با موفقیت به خبرنامه افزوده شد", "success");
-                }
-                });
-
-        });
-
-
-    $(document).ready(function() {
-
-
-    });
-
-
+    window.addEventListener("load",function(){for(var e=document.getElementsByTagName("img"),t=0;t<e.length;t++)e[t].getAttribute("data-src")&&e[t].setAttribute("src",e[t].getAttribute("data-src"))},!1),$("body").on("hidden.bs.modal",".modal",function(){$("video").trigger("pause")}),jQuery(document).ready(function(){jQuery("#newsletter").click(function(e){""!==$("#email-news").val()&&($body=$("body"),$(document).on({ajaxStart:function(){$body.addClass("loading")},ajaxStop:function(){$body.removeClass("loading")}}),jQuery.ajax({url:"{{ route('newsletter') }}",method:"get",data:{email:$("#email-news").val()},success:function(e){console.log("newsletterOk")}}))})}),$("#newsletter").each(function(){$(this).on("click",function(){""!==$("#email-news").val()&&swal("ایمیل شما","با موفقیت به خبرنامه افزوده شد","success")})}),$(document).ready(function(){});
 </script>
 
 
@@ -632,66 +502,47 @@
 
 
 </script>
-
-
-<!--===============================================================================================-->
-
-
-
-
+@foreach($products as $product)
+	@foreach($product->off as $off)
+		@if($off->special==1)
+			@php($end=$off->end)
+		@endif
+	@endforeach
+@endforeach
+<script type="text/javascript">
+    $('#countDown').countdown('{{@$end}}',function(event) {$(this).html(event.strftime('<div class="flex-col-c-m size3 countdown m-l-5 m-r-5">\n\t\t\t\t\t\t\t\t\t<span class="m-text10 p-b-1 days">\n\t\t\t\t\t\t\t\t\t\t%D\n\t\t\t\t\t\t\t\t\t</span>\n\n\t\t\t\t\t\t\t\t<span class="s-text5">\n\t\t\t\t\t\t\t\t\t\tروز\n\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t<div class="flex-col-c-m size3 countdown m-l-5 m-r-5">\n\t\t\t\t\t\t\t\t\t<span class="m-text10 p-b-1 hours">\n\t\t\t\t\t\t\t\t\t\t%H\n\t\t\t\t\t\t\t\t\t</span>\n\n\t\t\t\t\t\t\t\t<span class="s-text5">\n\t\t\t\t\t\t\t\t\t\tساعت\n\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t<div class="flex-col-c-m size3 countdown m-l-5 m-r-5">\n\t\t\t\t\t\t\t\t\t<span class="m-text10 p-b-1 minutes">\n\t\t\t\t\t\t\t\t\t\t%M\n\t\t\t\t\t\t\t\t\t</span>\n\n\t\t\t\t\t\t\t\t<span class="s-text5">\n\t\t\t\t\t\t\t\t\t\tدقیقه\n\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t<div class="flex-col-c-m size3 countdown m-l-5 m-r-5">\n\t\t\t\t\t\t\t\t\t<span class="m-text10 p-b-1 seconds">\n\t\t\t\t\t\t\t\t\t\t%S\n\t\t\t\t\t\t\t\t\t</span>\n\n\t\t\t\t\t\t\t\t<span class="s-text5">\n\t\t\t\t\t\t\t\t\t\tثانیه\n\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t</div>'));});
+	function video() {
+		$('.video').html('<video controls style="width: 100%;" ><source src="https://statics.arastowel.com/images/aras.mp4" type="video/mp4"></video>');
+    }
+</script>
 
 <script type="text/javascript">
 
-	@foreach($products as $product)
-	@foreach($product->off as $off)
-	@if($off->special==1)
-		@php($end=$off->end)
-	@endif
-	@endforeach
-	@endforeach
-    $('#countDown').countdown('{{@$end}}', function(event) {
-        $(this).html(
-            event.strftime('<div class="flex-col-c-m size3 countdown m-l-5 m-r-5">\n' +
-                '\t\t\t\t\t\t\t\t\t<span class="m-text10 p-b-1 days">\n' +
-                '\t\t\t\t\t\t\t\t\t\t%D\n' +
-                '\t\t\t\t\t\t\t\t\t</span>\n' +
-                '\n' +
-                '\t\t\t\t\t\t\t\t<span class="s-text5">\n' +
-                '\t\t\t\t\t\t\t\t\t\tروز\n' +
-                '\t\t\t\t\t\t\t\t\t</span>\n' +
-                '\t\t\t\t\t\t\t</div>\n' +
-                '\n' +
-                '\t\t\t\t\t\t\t<div class="flex-col-c-m size3 countdown m-l-5 m-r-5">\n' +
-                '\t\t\t\t\t\t\t\t\t<span class="m-text10 p-b-1 hours">\n' +
-                '\t\t\t\t\t\t\t\t\t\t%H\n' +
-                '\t\t\t\t\t\t\t\t\t</span>\n' +
-                '\n' +
-                '\t\t\t\t\t\t\t\t<span class="s-text5">\n' +
-                '\t\t\t\t\t\t\t\t\t\tساعت\n' +
-                '\t\t\t\t\t\t\t\t\t</span>\n' +
-                '\t\t\t\t\t\t\t</div>\n' +
-                '\n' +
-                '\t\t\t\t\t\t\t<div class="flex-col-c-m size3 countdown m-l-5 m-r-5">\n' +
-                '\t\t\t\t\t\t\t\t\t<span class="m-text10 p-b-1 minutes">\n' +
-                '\t\t\t\t\t\t\t\t\t\t%M\n' +
-                '\t\t\t\t\t\t\t\t\t</span>\n' +
-                '\n' +
-                '\t\t\t\t\t\t\t\t<span class="s-text5">\n' +
-                '\t\t\t\t\t\t\t\t\t\tدقیقه\n' +
-                '\t\t\t\t\t\t\t\t\t</span>\n' +
-                '\t\t\t\t\t\t\t</div>\n' +
-                '\n' +
-                '\t\t\t\t\t\t\t<div class="flex-col-c-m size3 countdown m-l-5 m-r-5">\n' +
-                '\t\t\t\t\t\t\t\t\t<span class="m-text10 p-b-1 seconds">\n' +
-                '\t\t\t\t\t\t\t\t\t\t%S\n' +
-                '\t\t\t\t\t\t\t\t\t</span>\n' +
-                '\n' +
-                '\t\t\t\t\t\t\t\t<span class="s-text5">\n' +
-                '\t\t\t\t\t\t\t\t\t\tثانیه\n' +
-                '\t\t\t\t\t\t\t\t\t</span>\n' +
-                '\t\t\t\t\t\t\t</div>'
-            ));
+
+    $(document).ready(function() {
+        var flag=false;
+        $(window).scroll(function(){
+        var scrollTop     = $(window).scrollTop(),
+            elementOffset = $('#cat-section').offset().top,
+            distance      = (elementOffset - scrollTop);
+        if(distance<=0 && flag===false){
+            flag=true;
+            jQuery.ajax({
+
+                    url: "{{ route('php-file') }}",
+                    method: 'get',
+                    data: {
+                        size: 1
+                    },
+                    success: function (response) {
+                        $('.loadinsta ').html(response);
+                    }
+                }
+            )
+        }
+        });
     });
+
 </script>
 </body>
 </html>

@@ -378,19 +378,54 @@
 
 <p>&nbsp;</p>
 
-<p><img alt="" src="https://arastowel.com/files/icons/2000px-Waschen_40.svg.png" style="border-style:solid; border-width:0px; float:right; height:50px; margin:-11px 1px; width:50px" />&nbsp; &nbsp;شستشو با ماشین یا دست حداکثر تا ۴۰ درجه</p>
+<p><img alt="" src="https://arastowel.com/files/icons/2000px-Waschen_40.svg.png" style="border-style:solid;
+ border-width:0px;
+  float:right;
+   height:50px;
+    margin:-11px 1px;
+     width:50px
+" />&nbsp; &nbsp;شستشو با ماشین یا دست حداکثر تا ۴۰ درجه</p>
 
 <p>&nbsp;</p>
 
-<p><img alt="" src="https://arastowel.com/files/icons/gin-sym-pro-dry-not.jpg" style="border-style:solid; border-width:0px; float:right; height:50px; margin:-11px 1px; width:50px" />&nbsp;&nbsp; خشکشویی نکنید</p>
+<p><img alt="" src="https://arastowel.com/files/icons/gin-sym-pro-dry-not.jpg" style="border-style:solid;
+ border-width:0px;
+
+  float:right;
+
+  height:50px;
+
+  margin:-11px 1px;
+
+   width:50px" />&nbsp;&nbsp; خشکشویی نکنید</p>
 
 <p>&nbsp;</p>
 
-<p><img alt="" src="https://arastowel.com/files/icons/Do-not-use-bleach-icon-300x235.png" style="border-style:solid; border-width:0px; float:right; height:39px; margin:-11px 1px; width:50px" />&nbsp; &nbsp;از سفید کننده استفاده نکنید</p>
+<p><img alt="" src="https://arastowel.com/files/icons/Do-not-use-bleach-icon-300x235.png" style="border-style:solid;
+
+ border-width:0px;
+
+ float:right;
+
+  height:39px;
+
+   margin:-11px 1px;
+
+   width:50px" />&nbsp; &nbsp;از سفید کننده استفاده نکنید</p>
 
 <p>&nbsp;</p>
 
-<p><img alt="" src="https://arastowel.com/files/icons/88742-200.png" style="border-style:solid; border-width:0px; float:right; height:50px; margin:-11px 1px; width:50px" />&nbsp; &nbsp;می توانید از خشک کن استفاده کنید</p>
+<p><img alt="" src="https://arastowel.com/files/icons/88742-200.png" style="border-style:solid;
+
+border-width:0px;
+
+float:right;
+
+height:50px;
+
+margin:-11px 1px;
+
+width:50px" />&nbsp; &nbsp;می توانید از خشک کن استفاده کنید</p>
 
 <p>&nbsp;</p>
 
@@ -443,7 +478,7 @@
 
 @include('admin.includes.footerLinks')
 
-<script src="http://roza.aharian.ir/js/add-Product.js"></script>
+<script src="/js/add-Product.js"></script>
 <script src="https://statics.arastowel.com/panel-admin/js/persian-date-0.1.8.min.js"></script>
 <script src="https://statics.arastowel.com/panel-admin/js/persian-datepicker-0.4.5.min.js"></script>
 <!-- Page script -->

@@ -21,13 +21,11 @@
 <section class="bgwhite p-t-55 p-b-65">
 	<div class="container">
 		<div class="row" style="direction: rtl;">
-			<div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
+			<div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 p-b-50">
 				<div class="leftbar p-r-20 p-r-0-sm">
-					<!--  -->
 					<h4 class="m-text14 p-b-7">
 						دسته بندی ها
 					</h4>
-
 					<ul class="p-b-54">
 						<li class="p-t-4">
 							<a title="همه محصولات" href="{{route('shop')}}" class="catText ">
@@ -65,27 +63,21 @@
 							</a>
 						</li>
 					</ul>
-
-
 				</div>
 			</div>
-
 			<div class="col-sm-6 col-md-8 col-lg-9 p-b-10">
-				<!--  -->
-
-
 				<!-- Product -->
 				<div class="row">
 					@foreach($products as $product)
 						@if($product->published==1)
 
-						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+						<div class=" col-sm-12 col-md-6 col-lg-4 col-xl-4 p-b-50">
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative">
 								<img src="<?=Croppa::url($product->image, 270, 360); ?>" alt="{{$product->name}}">
 
-								<div class="block2-overlay trans-0-4">
+								<div onclick="window.location.replace('{{route('shop.product',['product_id' => $product->id , 'product_name'=>str_replace(' ','-',$product->name)])}}')" style="cursor: pointer" class="block2-overlay trans-0-4">
 									@if(\Illuminate\Support\Facades\Auth::check())
 
 										<a title="{{$product->name}}" class="block2-btn-addwishlist hov-pointer trans-0-4" id="{{$product->id}}">
@@ -116,8 +108,9 @@
 												@foreach($product->off as $off)
 													@if(strtotime($off->start)<time() && strtotime($off->end)>time())
 														@php $percent=100-$off->percent; $newprice=$oldprice*$percent/100;  @endphp
-														<span style="color: purple;font-size: 15px" class="home-product-price"> {{number_format(($newprice))}}تومان </span>
 														<span style="text-decoration: line-through;font-size: 15px" class="home-product-price"> {{number_format($oldprice)}} تومان</span>
+
+														<span style="color: purple;font-size: 15px" class="home-product-price"> {{number_format(($newprice))}}تومان </span>
 														@php $hasoff=1 @endphp
 													@else
 														{{number_format($product->price)}} تومان
@@ -143,8 +136,9 @@
 												@foreach($product->off as $off)
 													@if(strtotime($off->start)<time() && strtotime($off->end)>time())
 														@php $percent=100-$off->percent; $newprice=$oldprice*$percent/100;  @endphp
-														<span style="color: purple;" class="home-product-price"> {{number_format(($newprice))}}تومان </span>
 														<span style="text-decoration: line-through;" class="home-product-price"> {{number_format($oldprice)}} تومان</span>
+
+														<span style="color: purple;" class="home-product-price"> {{number_format(($newprice))}}تومان </span>
 														@php $hasoff=1 @endphp
 													@else
 														{{number_format($price)}} تومان
@@ -182,8 +176,8 @@
 <section class="shipping bgwhite" >
 	<div class="flex-w p-l-15 p-r-15 " style="background-color:#c788bc;text-align: center;direction: rtl;padding: 50px 0;">
 		<div class="container">
-			<h1 style="font-size: 24px;color: white;padding-bottom:10px;">برند حوله ارس ، تولیدکننده انواع حوله تن پوش ، حوله دست و صورت، حوله حمام ، حوله استخری، پالتویی و ...</h1>
-			<h2 style="font-size: 24px;color: white">  برند حوله ا رس مقابل دیدگان شماست . ما بر آنیم تا در هر نقطه‌ای از ایران که هستید  </h2>
+			<h1 style="font-size: 24px;color: white;padding-bottom:10px;text-align: center">برند حوله ارس ، تولیدکننده انواع حوله تن پوش ، حوله دست و صورت، حوله حمام ، حوله استخری، پالتویی و ...</h1>
+			<h2 style="font-size: 24px;color: white;text-align: center">  برند حوله ا رس مقابل دیدگان شماست . ما بر آنیم تا در هر نقطه‌ای از ایران که هستید  </h2>
 
 			<p style="color: white;text-align: center!important;font-size: 24px;"> از محصولات ما لذت ببرید و لبخند رضایت را بر لبانتان بنشانیم. </p>
 		</div>
